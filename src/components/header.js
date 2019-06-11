@@ -5,12 +5,9 @@ function Header(props){
     return(
         <div>
             <div>Header Logo</div>
-            <img src="../../../public/images/BuzzSuite.png"></img>
-            <Link to="/">Home</Link> | 
-            <Link to="/blog">Blog</Link> | 
-            <Link to="/about">About</Link> | 
-            <Link to="/contact">Contact</Link> | 
-            <Link to="/learn">Learn</Link> |
+            <Link to="/">Home </Link>
+            <Link to="/dashboard">Dashboard </Link>
+            <Link to="/influencers">Influencers </Link>
         </div>
     )
 }
