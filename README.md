@@ -4,7 +4,7 @@
 ## Mock Ups
 
 Influencer Page
-![Influencer Page](./public/images/buzzsuite-influencer-single-layout.png)
+![Influencer Page](./public/images/buzzsuite-influencers-layout.png)
 
 Single Influencer Page
 ![Single Influencer Page](./public/images/buzzsuite-influencer-single-layout.png)
