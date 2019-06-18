@@ -19,17 +19,14 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 #influencer-table {
   margin: auto;
-  color: green;
-  background: #61dafb;
+  color: #2e3f4e;
+  background: #f6f6f6;
   border-radius: 5px;
 }
 
 #influencer-table-heading {
-  background: brown;
+  background: #e5f9ff;
+  font-size: 1.6em;
 }
