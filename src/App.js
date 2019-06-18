@@ -6,9 +6,7 @@ import Header from './components/header';
 import Dashboard from './components/pages/dashboard';
 import Influencers from './components/pages/influencers';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Link } from "react-router-dom";
-
 
 class App extends React.Component {
   render() {
