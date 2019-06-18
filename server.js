@@ -17,7 +17,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/TommyDatabase", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_DB_BUZZSUITE, { useNewUrlParser: true });
 
 // Start the API server
 app.listen(PORT, function() {
