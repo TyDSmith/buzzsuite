@@ -3,6 +3,8 @@
 Dependencies
 
 - react-router
+- react-table
+- namor
 
 ## Mock Ups
 
