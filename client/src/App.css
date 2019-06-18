@@ -19,15 +19,14 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#influencer-table {
+  margin: auto;
+  color: #2e3f4e;
+  background: #f6f6f6;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#influencer-table-heading {
+  background: #e5f9ff;
+  font-size: 1.6em;
 }

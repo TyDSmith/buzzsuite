@@ -1,7 +1,11 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+const twitterRoutes = require("./twitter");
+const authRoutes = require("./auth");
 
-// Book routes
-router.use("/books", bookRoutes);
+// Google Authenticate routes
+// router.use("/auth", authRoutes);
+
+// Twitter routes
+router.use("/twitter", twitterRoutes);
 
 module.exports = router;
