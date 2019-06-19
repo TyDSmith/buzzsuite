@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import Dashboard from './components/pages/dashboard';
 import Influencers from './components/pages/influencers';
+import Login from './components/pages/login';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Link } from "react-router-dom";
@@ -18,7 +19,7 @@ class App extends React.Component {
           <Navbar />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/influencers" component={Influencers} />
-
+          <Login />
         </div>
       </Router >
 
