@@ -5,6 +5,8 @@ Dependencies
 - react-router
 - react-table
 - namor
+- react-bootstrap
+- bootstrap
 
 ## Mock Ups
 
