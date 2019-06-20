@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
 import Dashboard from './components/pages/dashboard';
@@ -8,9 +6,8 @@ import Influencers from './components/pages/influencers';
 import Login from './components/login/login';
 import Signup from './components/login/signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
-import { Link } from "react-router-dom";
 import Campaigns from './components/pages/campaigns';
+import SingleInfluencer from './components/pages/single-influencer';
 
 
 class App extends React.Component {
@@ -24,6 +21,7 @@ class App extends React.Component {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/campaigns" component={Campaigns} />
+          <Route path="/influencer" component={SingleInfluencer} />
 
         </div>
       </Router >
