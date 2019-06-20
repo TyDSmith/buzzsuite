@@ -19,8 +19,8 @@ passport.use(new GoogleStrategy({
       photos: profile.photos[0].value
     }
 
-    console.log (user)
-    //userController.create(user)
+    //console.log (user)
+    userController.create({body:user})
   }
 ));
 

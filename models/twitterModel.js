@@ -69,5 +69,5 @@ var twitterSchema = new Schema({
 });
 
 
-var twitterModel = mongoose.model("twitterCollection", twitterSchema);
+var twitterModel = mongoose.model("twitterCollections", twitterSchema);
 module.exports = twitterModel;
