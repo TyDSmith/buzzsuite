@@ -21,6 +21,9 @@ function Navbar(props) {
                         <li>
                             <Link to={"/influencers"}>Influencers </Link>
                         </li>
+                        <li>
+                            <Link to={"/campaigns"}>Campaigns </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

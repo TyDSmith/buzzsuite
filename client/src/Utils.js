@@ -19,6 +19,7 @@ const newPerson = () => {
         product: namor.generate({ words: 1, numbers: 0 }),
         username: namor.generate({ words: 1, numbers: 3 }),
         followers: Math.floor(Math.random() * 300000),
+        date: Math.floor(Math.random() * 30),
         cpm: Math.floor(Math.random() * 30),
         cpc: Math.floor(Math.random() * 100),
         progress: Math.floor(Math.random() * 100),
