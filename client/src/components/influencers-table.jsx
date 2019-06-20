@@ -17,6 +17,7 @@ class InfluencersTable extends Component {
       <div>
         <ReactTable
           data={data}
+          defaultPageSize={8}
           columns={[
             {
               Header: "Accounts",
