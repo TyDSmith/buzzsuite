@@ -8,6 +8,7 @@ import Influencers from './components/pages/influencers';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Link } from "react-router-dom";
+import Campaigns from './components/pages/campaigns';
 
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
           <Navbar />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/influencers" component={Influencers} />
+          <Route path="/campaigns" component={Campaigns} />
 
         </div>
       </Router >
