@@ -5,7 +5,6 @@ class InfluencerHistory extends Component {
   render() {
     return (
       <div class="influencer-history">
-        <h3>JDoe</h3>
         <div class="influencer-history-single">
           <p>
             Date: <span>05/12/19</span>
