@@ -91,3 +91,38 @@
 .rt-td {
   background: #e5f9ff;
 }
+
+/* Single Influencer Page */
+
+.single-influencer-div {
+  display: flex;
+  min-height: 75vh;
+}
+
+.single-influencer-div .column-left,
+.single-influencer-div .column-right {
+  background: #cbd6e2;
+  border-radius: 5px;
+}
+
+.column-left {
+  flex-grow: 1;
+}
+
+.column-center {
+  flex-grow: 2;
+}
+
+.column-right {
+  flex-grow: 1;
+}
+
+.influencer-profile-stats {
+  font-size: 1.2em;
+}
+
+.influencer-history-single {
+  text-align: left;
+  border-bottom: 1px solid #cbd6e2;
+  margin: 5px 10px;
+}
