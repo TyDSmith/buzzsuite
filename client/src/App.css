@@ -19,6 +19,42 @@
   color: white;
 }
 
+/* Typography */
+
+.page-title {
+  text-align: left;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+/*  Navbar*/
+
+.navbar,
+.navbar-default {
+  background-color: #19334d;
+  color: white;
+  min-height: 62px;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding-top: 20px;
+  color: #e4f8ff;
+}
+
+.nav-item {
+  color: white;
+}
+
+/* Page Header */
+
+.page-heading {
+  border-bottom: 1px solid #cbd6e2;
+  margin: 15px 3px;
+}
 /* Influencers Page */
 
 /* Influencers Filter */
@@ -39,4 +75,12 @@
 #influencer-table-heading {
   background: #e5f9ff;
   font-size: 1.2em;
+}
+
+.ReactTable {
+  margin: 0 20px;
+}
+
+.rt-td {
+  background: #e5f9ff;
 }
