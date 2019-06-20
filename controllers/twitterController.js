@@ -15,6 +15,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByInfluencer: function(req, res) {
+    db.twitterModel
+      .find({influencerAccount : req.params.account})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.twitterModel
       .create(req.body)
