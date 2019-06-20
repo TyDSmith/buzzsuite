@@ -11,7 +11,7 @@ module.exports = {
   },
   findById: function(req, res) {
     db.twitterModel
-      .findById(req.params.id)
+      .find({bs_account_id : req.params.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -35,3 +35,4 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+
