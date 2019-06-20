@@ -70,4 +70,5 @@ var twitterSchema = new Schema({
 
 
 const twitterModel = mongoose.model("twitterCollection", twitterSchema);
+
 module.exports = twitterModel;

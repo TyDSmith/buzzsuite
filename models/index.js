@@ -1,3 +1,4 @@
 module.exports = {
-  twitterModel: require("./twitterModel")
+  twitterModel: require("./twitterModel"),
+  userModel: require("./userModel")
 };
