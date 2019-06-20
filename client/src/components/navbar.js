@@ -6,7 +6,7 @@ function Navbar(props) {
         <nav className="navbar navbar-default">
             <div className="container">
                 <div className="navbar-header">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img alt="Brand" src="../images/logos/BuzzSuite.png" height="30" />
                     </a>
 
