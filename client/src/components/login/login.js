@@ -13,12 +13,22 @@ function Login(props) {
                     <br />
                     <button type="button" class="login-form-button">Submit</button>
                 </form>
+
                 <a href="/signup"><button>Sign up</button></a>
 
+
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
 
             </div>
 
         </div>
+
+
+
+
+
 
 
     )
