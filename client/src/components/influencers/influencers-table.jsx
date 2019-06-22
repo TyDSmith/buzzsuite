@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import { makeData } from "../../Utils";
+import API from "./../.."
 
 class InfluencersTable extends Component {
   constructor() {
