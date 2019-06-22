@@ -35,20 +35,7 @@ class AddInfluencerButton extends Component {
           }}
         >
           <div>And I am pane content</div>
-          {/* <form action="">
-            <input>Influencer name</input>
-          </form> */}
           <br />
-        </SlidingPane>
-        <SlidingPane
-          closeIcon={<div>Some div containing custom close icon.</div>}
-          isOpen={this.state.isPaneOpenLeft}
-          title="Hey, it is optional pane title.  I can be React component too."
-          from="left"
-          width="200px"
-          onRequestClose={() => this.setState({ isPaneOpenLeft: false })}
-        >
-          <div>And I am pane content on left.</div>
         </SlidingPane>
       </div>
     );
