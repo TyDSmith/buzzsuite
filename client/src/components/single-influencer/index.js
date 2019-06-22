@@ -1,6 +1,6 @@
 import React from 'react';
 import InfluencerProfile from './influencer-profile';
-import CampaignInputForm from '../campaign-input-form';
+import CampaignInputForm from './campaign-input-form';
 import InfluencerHistory from './influencer-history';
 import '../single-influencer/single-influencer.css';
 
