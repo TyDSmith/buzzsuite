@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/navbar';
-import Dashboard from './components/dashboard/dashboard';
+import Dashboard from './components/dashboard';
 import Influencers from './components/influencers';
 import Login from './components/login';
 import Signup from './components/login/signup';
-import Reports from './components/reports';
+// import Reports from './components/reports';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Campaigns from './components/campaigns';
 import SingleInfluencer from './components/single-influencer';
@@ -22,7 +22,7 @@ class App extends React.Component {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/campaigns" component={Campaigns} />
-          <Route path="/reports" component={Reports} />
+          {/* <Route path="/reports" component={Reports} /> */}
           <Route path="/influencer" component={SingleInfluencer} />
 
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import TwitterCPMReport from '../reports/twitter-cpm-graph'
+import TwitterCPMReport from './twitter-cpm-graph'
 
 function Dashboard(props) {
     return (
