@@ -1,0 +1,21 @@
+/* Influencers Page */
+
+/* Influencers Filter */
+
+#influencersfilterdiv {
+  float: left;
+  margin: 5px;
+  border: solid 1px lightblue;
+}
+/* Influencer Table */
+#influencer-table {
+  margin: auto;
+  color: #2e3f4e;
+  background: #f6f6f6;
+  border-radius: 5px;
+}
+
+#influencer-table-heading {
+  background: #e5f9ff;
+  font-size: 1.2em;
+}
