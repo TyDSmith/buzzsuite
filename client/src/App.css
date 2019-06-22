@@ -70,3 +70,9 @@
 .rt-td {
   background: #e5f9ff;
 }
+
+/* Navbar */
+
+.nav-link {
+  color: rgb(0, 162, 255);
+}
