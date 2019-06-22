@@ -19,7 +19,10 @@ class AddInfluencerButton extends Component {
   render() {
     return (
       <div ref={ref => (this.el = ref)}>
-        <button onClick={() => this.setState({ isPaneOpen: true })}>
+        <button
+          class="add-influencer-button"
+          onClick={() => this.setState({ isPaneOpen: true })}
+        >
           Add Influencer
         </button>
         <div style={{ marginTop: "32px" }} />
@@ -29,6 +32,7 @@ class AddInfluencerButton extends Component {
           isOpen={this.state.isPaneOpen}
           title="Add Influencer"
           subtitle="Optional subtitle."
+          width="500px"
           onRequestClose={() => {
             // triggered on "<" on left top click or on outside click
             this.setState({ isPaneOpen: false });

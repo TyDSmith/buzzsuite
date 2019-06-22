@@ -20,6 +20,10 @@
   font-size: 1.2em;
 }
 
+/* Add influencer button */
+.add-influencer-button {
+  float: right;
+}
 /* Modal */
 
 .slide-pane__header {
