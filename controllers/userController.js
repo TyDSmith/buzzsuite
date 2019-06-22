@@ -15,10 +15,10 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  create: function(req, res) { console.log (req),
+  create: function(req, res) { 
     db.userModel
       .create(req.body)
-      .then(dbModel => {console.log (dbModel), res.json(dbModel)})
+      .then(dbModel => {res.json(dbModel)})
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {

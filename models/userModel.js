@@ -3,14 +3,14 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
   google_id: {
-    type: Number,
+    type: String,
     required: "google id is required",
     unique: true
   },
   displayName: {
     type: String
   },
-  email: {
+  emails: {
     type: String
   },
   photos: {
@@ -19,4 +19,5 @@ var userSchema = new Schema({
 });
 
 var userModel = mongoose.model("userCollections", userSchema);
+
 module.exports = userModel;
