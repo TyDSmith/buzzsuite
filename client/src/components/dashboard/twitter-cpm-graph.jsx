@@ -1,5 +1,5 @@
 import React from "react";
-import "./reports.css";
+import "./dashboard.css";
 
 function TwitterCPMReport(props) {
   return (
