@@ -1,4 +1,5 @@
 import React from 'react';
+import TwitterCPMReport from '../reports/twitter-cpm-graph'
 
 function Dashboard(props) {
     return (
@@ -6,6 +7,8 @@ function Dashboard(props) {
 
             <p>Dashboard</p>
             <h3>Woooodashboard</h3>
+            <TwitterCPMReport />
+
         </div>
     )
 }

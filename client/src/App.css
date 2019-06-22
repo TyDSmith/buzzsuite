@@ -62,27 +62,6 @@
   border-bottom: 1px solid #cbd6e2;
   margin: 15px 3px;
 }
-/* Influencers Page */
-
-/* Influencers Filter */
-
-#influencersfilterdiv {
-  float: left;
-  margin: 5px;
-  border: solid 1px lightblue;
-}
-/* Influencer Table */
-#influencer-table {
-  margin: auto;
-  color: #2e3f4e;
-  background: #f6f6f6;
-  border-radius: 5px;
-}
-
-#influencer-table-heading {
-  background: #e5f9ff;
-  font-size: 1.2em;
-}
 
 .ReactTable {
   margin: 0 20px;
@@ -90,49 +69,4 @@
 
 .rt-td {
   background: #e5f9ff;
-}
-
-/* Single Influencer Page */
-
-.single-influencer-div {
-  display: flex;
-  min-height: 75vh;
-}
-
-.single-influencer-div .column-left,
-.single-influencer-div .column-right {
-  background: #cbd6e2;
-  border-radius: 5px;
-}
-
-.column-left {
-  flex-grow: 1;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.column-center {
-  flex-grow: 2;
-  background: #f4f8fa;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.column-right {
-  flex-grow: 1;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.influencer-profile-stats {
-  font-size: 1.2em;
-}
-
-.influencer-history-single {
-  text-align: left;
-  border-bottom: 1px solid #cbd6e2;
-  margin: 5px 10px;
-  background: white;
-  padding: 5px;
-  box-shadow: 0px 0px 20px 0px #cbd6e2;
 }
