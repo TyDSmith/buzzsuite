@@ -7,7 +7,7 @@ class NavBar extends Component {
         return (
             <div>
                 <Navbar bg="primary" variant="dark">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home"><img src="../images/logos/BuzzSuite.png" height="25"></img></Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/campaigns">Campaigns</Nav.Link>
                         <Nav.Link href="/Influencers">Influencers</Nav.Link>
