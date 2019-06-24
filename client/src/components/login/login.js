@@ -1,34 +1,47 @@
 import React, {Component} from 'react';
-const API = require("../utility/API").default
+//const API = require("../utility/API").default
 
 class Login extends Component {
-
-    google = () => {
-        // API.googleLogin().then(res => console.log (res))
-
-        // Post request to backend
-        fetch('/auth/google', {
-            method: 'GET',
-        }).then((req)=>{
-            console.log (req)
-        })
+    constructor(props){
+        super(props);
+        this.state = {};
     };
+
+    onChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        
+        this.setState({
+          [name]: value
+        });
+    };
+
+    onSubmit = () => {
+        console.log (this.state)
+    }
 
     render () {
         return (
             <div>
-                <form>
-                    <input type="text" name="username" placeholder="Username"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <button type="button" >Submit</button>
+            <div class="login-modal">
+                <img src="../images/logos/BuzzSuite.png" alt="logo" width="40%;" />
+                <form class="login-form">
+                    <input onChange = {this.onChange.bind(this)} type="text" name="username" placeholder="Username" class="login-form-input" />
+                    <br />
+                    <input onChange = {this.onChange.bind(this)} type="password" name="password" placeholder="Password" class="login-form-input" />
+                    <br />
+                    <button onClick = {this.onSubmit.bind(this)} type="button" class="login-form-button">Submit</button>
                 </form>
+
                 <a href="/signup"><button>Sign up</button></a>
-                <a href="http://localhost:3001/auth/google"><button>Login with Google</button></a>
-                {/* <button onClick={this.google}>Login with Google+</button> */}
+
+                <div class="forgot-password">
+                    {/* <a href="#">Forgot your password?</a> */}
+                </div>
             </div>
+
+        </div>
         )
     }
-    
-}
-
+}  
 export default Login;

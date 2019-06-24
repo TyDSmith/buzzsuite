@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 
 const cookieSession = require("cookie-session")
 const passport = require("passport")
@@ -28,10 +28,11 @@ app.use(cookieSession({
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors())
-// Add routes, both API and view
 
+// Add routes, both API and view
 app.use(routes);
+
+
 
 // Connect to the Mongo DB
 

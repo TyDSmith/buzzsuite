@@ -17,8 +17,20 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/user", userData);
   },
-  // Google Login
-  googleLogin: function() {
-    return axios.get("/auth/google");
+
+  // Local Login
+  userSignup: function(userData) {
+    console.log ("API userSignup")
+    return axios.post("/auth/user/signup", userData);
   },
+  userNameValidate: function(userData) {
+    return axios.get("/auth/user/signup", userData)
+  },
+  userLogin: function(userData) {
+    return axios.post("/auth/user/login", userData);
+  },
+  userSignout: function(userData) {
+    return axios.post("/auth/user/signout", userData);
+  },
+
 };

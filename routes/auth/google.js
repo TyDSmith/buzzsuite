@@ -70,7 +70,7 @@ passport.use(new GoogleStrategy({
 
 router.route("/")
   .get(passport.authenticate('google', { scope: ['profile'] }));
-  //.get(()=> {console.log ("google auth route")});
+  // .get(()=> {console.log ("google auth route")});
 
 router.route("/callback")
   .get(passport.authenticate('google',
@@ -78,7 +78,7 @@ router.route("/callback")
   function(req, res) {
     // Successful authentication, redirect home.
     console.log(req.user)
-    res.redirect('/logged-in')
+    res.redirect("http://localhost:3000/dashboard")
   });
 
 module.exports = router;

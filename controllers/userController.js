@@ -2,9 +2,19 @@ const db = require("../models");
 
 // Defining methods for the.twitterModelsController
 module.exports = {
+  // MongoDB
   findAll: function(req, res) {
     db.userModel
       .find(req.query)
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findOne: function(req, res) {
+    console.log (req.body)
+    console.log (req.query)
+    db.userModel
+      .findOne({email: req.body})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -33,5 +43,33 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
+  // Login
+
+  signUp: (req, res) => {
+    db.userModel
+        .create(req.body)
+        .then(dbModel => {res.redirect("/login")})
+        .catch(err => res.status(422).json(err));
+  },
+
+
+  // signup: function(req, res) {
+  //   db.userModel
+  //     .create(req.body)
+  //     .then(dbModel => {res.json(dbModel)})
+  //     .catch(err => res.status(422).json(err));
+  // },
+  signIn: function(req, res) {
+    // Token
+    res.json("signIn route")
+  },
+  signOut: function(req, res) {
+    // Token
+    res.json("signOut route")
+  },
+
+
+  
 };

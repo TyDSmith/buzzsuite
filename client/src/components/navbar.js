@@ -24,8 +24,8 @@ function Navbar(props) {
                         <li>
                             <Link to={"/campaigns"}>Campaigns </Link>
                         </li>
-                        <li>
-                            <Link to={"/login"}>login </Link>
+                        <li class="nav-login">
+                            <Link to={"/login"}>Login </Link>
                         </li>
                     </ul>
                 </div>
