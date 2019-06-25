@@ -2,9 +2,9 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { makeData } from "../Utils";
+import { makeData } from "../../Utils";
 
-class InfluencersTable extends Component {
+class CampaignsTable extends Component {
   constructor() {
     super();
     this.state = {
@@ -30,6 +30,11 @@ class InfluencersTable extends Component {
                   Header: "Channel",
                   id: "channel",
                   accessor: d => d.channel
+                },
+                {
+                  Header: "Date",
+                  id: "date",
+                  accessor: d => d.date
                 },
                 {
                   Header: "Product",
@@ -65,4 +70,4 @@ class InfluencersTable extends Component {
   }
 }
 
-export default InfluencersTable;
+export default CampaignsTable;

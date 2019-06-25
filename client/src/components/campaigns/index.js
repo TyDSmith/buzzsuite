@@ -1,5 +1,5 @@
 import React from 'react';
-import CampaignsTable from '../campaigns-table';
+import CampaignsTable from './campaigns-table';
 // import CampaignsFilter from '../campaigns-filter.jsx';
 
 function Campaigns(props) {

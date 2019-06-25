@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/navbar';
-import Dashboard from './components/pages/dashboard';
-import Influencers from './components/pages/influencers';
-import Login from './components/login/login';
+import NavBar, { Component } from './components/navbar';
+import Dashboard from './components/dashboard';
+import Influencers from './components/influencers';
+import Login from './components/login';
 import Signup from './components/login/signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Campaigns from './components/pages/campaigns';
-import SingleInfluencer from './components/pages/single-influencer';
+import Campaigns from './components/campaigns';
+import SingleInfluencer from './components/single-influencer';
 
 
 class App extends React.Component {
@@ -15,14 +15,13 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <Navbar />
+          <NavBar />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/influencers" component={Influencers} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/campaigns" component={Campaigns} />
           <Route path="/influencer" component={SingleInfluencer} />
-
         </div>
       </Router >
 

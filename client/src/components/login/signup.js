@@ -30,8 +30,10 @@ class Signup extends Component {
             }
             API.userSignup(userData)
             .then(
-                (req, res) => {
-                    res.redirect("/login")
+                (account) => {
+                    if (account.status === 200) {
+                        alert("Account Created") 
+                    };
                 })
             .catch((errorMessage)=> {
                 if (errorMessage) {

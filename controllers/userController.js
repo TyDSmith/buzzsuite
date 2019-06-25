@@ -50,7 +50,7 @@ module.exports = {
   signUp: (req, res) => {
     db.userModel
         .create(req.body)
-        .then(dbModel => {res.redirect("/login")})
+        .then(dbModel => {res.json(dbModel)})
         .catch(err => res.status(422).json(err));
   },
 
@@ -62,8 +62,11 @@ module.exports = {
   //     .catch(err => res.status(422).json(err));
   // },
   signIn: function(req, res) {
-    // Token
-    res.json("signIn route")
+    db.userModel
+      .findOne({email:req.body.email,password: req.body.password})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+    
   },
   signOut: function(req, res) {
     // Token

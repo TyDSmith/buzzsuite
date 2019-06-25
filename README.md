@@ -7,6 +7,8 @@ Dependencies
 - namor
 - react-bootstrap
 - bootstrap
+- react-modal
+- react-sliding-pane
 
 ## Mock Ups
 
