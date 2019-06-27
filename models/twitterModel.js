@@ -19,7 +19,8 @@ var twitterSchema = new Schema({
       type: String
   },
   date: {
-      type: Date
+      type: Date,
+      default: Date.now
   },
   internalCost: {
       type: Number
