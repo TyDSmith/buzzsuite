@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TwitterCPMReport from './twitter-cpm-graph'
 
+function Dashboard(props) {
+    return (
+        <div>
 
-class Dashboard extends Component {
-    //let state = [];   
+            <p>Dashboard</p>
+            <h3>Woooodashboard</h3>
+            <TwitterCPMReport />
 
-
-    render() {
-        return (
-            <div>
-    
-                <p>Dashboard</p>
-                <h3>Woooodashboard</h3>
-                <TwitterCPMReport />
-
-        
-    
-            
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
 export default Dashboard;

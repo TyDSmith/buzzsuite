@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NavBar, { Component } from './components/navbar';
+import NavBar from './components/navbar';
 import Dashboard from './components/dashboard';
 import Influencers from './components/influencers';
 import Login from './components/login';
@@ -8,8 +8,6 @@ import Signup from './components/login/signup';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Campaigns from './components/campaigns';
 import SingleInfluencer from './components/single-influencer';
-import { userInfo } from 'os';
-
 
 class App extends React.Component {
 
@@ -48,7 +46,6 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <NavBar />
-          
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/influencers" component={Influencers} />
           {/* <Route path="/login" component={Login} /> */}
