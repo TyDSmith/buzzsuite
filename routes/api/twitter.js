@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const twitterController = require("../../controllers/twitterController");
 
-// Matches with "/api/books"
+// Matches with "/api/twitter"
 router.route("/")
   .get(twitterController.findAll)
   .post(twitterController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/twitter/:id"
 router
   .route("/:id")
   .get(twitterController.findById)

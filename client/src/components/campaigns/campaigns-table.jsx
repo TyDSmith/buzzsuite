@@ -5,13 +5,17 @@ import "react-table/react-table.css";
 import { makeData } from "../../Utils";
 
 class CampaignsTable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       data: makeData()
     };
   }
+
+  
+
   render() {
+    
     const { data } = this.state;
     return (
       <div>
