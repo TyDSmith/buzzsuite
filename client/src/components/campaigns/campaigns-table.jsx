@@ -5,6 +5,7 @@ import "react-table/react-table.css";
 import API from "../../Utils";
 
 class CampaignsTable extends Component {
+<<<<<<< HEAD
   // constructor() {
   //   super();
   //   this.state = {
@@ -27,8 +28,19 @@ class CampaignsTable extends Component {
       .catch(err => console.log(err));
       console.log(this.data)
   };
+=======
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: makeData()
+    };
+  }
+
+  
+>>>>>>> 8670c9dadafa5edcec4d342579db8d10fb734d82
 
   render() {
+    
     const { data } = this.state;
     return (
       <div>

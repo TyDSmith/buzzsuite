@@ -2,21 +2,25 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-  google_id: {
-    type: Number,
-    required: "google id is required",
+  email: {
+    type: String,
+    required: true,
     unique: true
   },
-  displayName: {
-    type: String
+  password: {
+    type: String,
+    required: true
   },
-  email: {
-    type: String
+  firstName: {
+    type: String,
+    required: true
   },
-  photos: {
-    type: String
-  },
+  lastName: {
+    type: String,
+    required: true
+  }
 });
 
 var userModel = mongoose.model("userCollections", userSchema);
+
 module.exports = userModel;
