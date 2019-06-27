@@ -6,6 +6,7 @@ import App from "../App";
 class NavBar extends Component {
     
     render() {
+<<<<<<< HEAD
     let UserLoggedIn = this.props.UserLoggedIn;
     let loginButton;
     if (UserLoggedIn) {
@@ -29,8 +30,30 @@ class NavBar extends Component {
             </Form>
           </Navbar>
         </div>
+=======
+        return (
+            <div>
+                <Navbar bg="primary" variant="dark">
+                    <Navbar.Brand href="/home">
+                        <img src="../images/logos/BuzzSuite.png" height="25" />
+                    </Navbar.Brand>
+                    <Nav className="mr-auto">
+                        <Link to="/campaigns"> Campaigns </Link>
+                        <Link to="/Influencers"> Influencers </Link>
+                        <Link to="/dashboard"> Dashboard </Link>
+                        {/* <Nav.Link to="/campaigns">Campaigns</Nav.Link>
+              <Nav.Link to="/Influencers">Influencers</Nav.Link>
+              <Nav.Link to="/dashboard">Dashboard</Nav.Link> */}
+                    </Nav>
+                    <Form inline>
+                        <Nav.Link href="/login">Login</Nav.Link>
+                    </Form>
+                </Navbar>
+            </div>
+>>>>>>> f3624d412e84f406aff94640491d9e6a8468b569
         );
     }
 }
 
 export default NavBar;
+
