@@ -5,7 +5,8 @@ import Dashboard from './components/dashboard';
 import Influencers from './components/influencers';
 import Login from './components/login';
 import Signup from './components/login/signup';
-import { BrowserRouter as Router, Route, Redirect, Link } from "react-router-dom";
+import forgotPassword from './components/login/forgotPassword'
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Campaigns from './components/campaigns';
 import SingleInfluencer from './components/single-influencer';
 
@@ -27,6 +28,10 @@ class App extends React.Component {
     
   }
 
+  signout = () =>{
+    console.log ("sign out triggered")
+    this.setState({UserLoggedIn: false})
+  }
 
   render() {
 
@@ -43,12 +48,7 @@ class App extends React.Component {
 
       <Router>
         <div className="App">
-          <NavBar />
-
-          <Link to="/dashboard"> Dashboard </Link>
-          <Link to="/influencers"> Influencers </Link>
-          <Link to="/influencer"> Influencer </Link>
-          <Link to="/campaigns"> Campaigns </Link>
+          <NavBar UserLoggedIn={this.state.UserLoggedIn} signout={this.signout}/>
 
           <Route 
             path="/campaigns" 
@@ -81,7 +81,9 @@ class App extends React.Component {
               (<Login {...props} updateState={this.updateState}/>))}
             // render={(props)=> <Login {...props} updateState={this.updateState} />} 
             />
+
           <Route path="/signup" component={Signup} />
+          <Route path="/forgotpassword" component={forgotPassword} />
           
           
         </div>

@@ -4,7 +4,33 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import App from "../App";
 
 class NavBar extends Component {
+    
     render() {
+<<<<<<< HEAD
+    let UserLoggedIn = this.props.UserLoggedIn;
+    let loginButton;
+    if (UserLoggedIn) {
+      loginButton = <Link onClick={this.props.signout}> signout </Link>
+    } else {
+      loginButton = <Link to="/login"> Login </Link>
+    }
+      return (
+        <div>
+          <Navbar bg="primary" variant="dark">
+            <Navbar.Brand href="/home">
+              <img src="../images/logos/BuzzSuite.png" alt="logo" height="25" />
+            </Navbar.Brand>
+            <Nav className="mr-auto">
+              <Link to="/campaigns"> Campaigns </Link>
+              <Link to="/Influencers"> Influencers </Link>
+              <Link to="/dashboard"> Dashboard </Link>
+            </Nav>
+            <Form inline>
+              {loginButton}
+            </Form>
+          </Navbar>
+        </div>
+=======
         return (
             <div>
                 <Navbar bg="primary" variant="dark">
@@ -24,6 +50,7 @@ class NavBar extends Component {
                     </Form>
                 </Navbar>
             </div>
+>>>>>>> f3624d412e84f406aff94640491d9e6a8468b569
         );
     }
 }

@@ -1,4 +1,5 @@
 import React, { Component }from 'react';
+import { BrowserRouter as Router, Link } from "react-router-dom"
 import './login.css';
 import API from '../utility/API';
 
@@ -38,7 +39,7 @@ class Login extends Component {
         return (
             <div>
                 <div class="login-modal">
-                    <img src="../images/logos/BuzzSuite.png" width="40%;" />
+                    <img src="../images/logos/BuzzSuite.png" alt="logo" width="40%;" />
                     <form class="login-form">
                         <input onChange = {this.onChange.bind(this)} type="text" name="email" placeholder="Username" class="login-form-input" />
                         <br />
@@ -48,7 +49,7 @@ class Login extends Component {
                     </form>
                     <a href="/signup"><button>Sign up</button></a>
                     <div class="forgot-password">
-                        <a href="#">Forgot your password?</a>
+                        <Link to="/forgotpassword"> Forgot your password? </Link>
                     </div>
                 </div>
             </div>

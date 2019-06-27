@@ -13,8 +13,9 @@ router.route('/signup')
 router.route('/signin')
   .post(UsersController.signIn);
   //.post(validateBody(schemas.authSchema), passportSignIn, UsersController.signIn);
-router.route('/signout')
-  .get(UsersController.signOut);
+
+// router.route('/forgotPassword')
+//   .update(UsersController.update);
 
 // router.route('/dashboard')
 //   .get(passportJWT, UsersController.dashboard);

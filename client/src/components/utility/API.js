@@ -11,8 +11,8 @@ export default {
   userSignin: function(userData) {
     return axios.post("/auth/user/signin", userData);
   },
-  userSignout: function(userData) {
-    return axios.post("/auth/user/signout", userData);
-  },
+  forgotPassword: function (userData) {
+    return axios.update("/auth/user/", userData);
+  }
 
 };

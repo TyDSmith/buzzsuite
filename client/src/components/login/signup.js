@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from "react-router-dom"
 import API from '../utility/API';
 
 
@@ -67,7 +68,7 @@ class Signup extends Component {
                     <input onChange = {this.onChange.bind(this)} type="password" name="confirmPassword" placeholder="ConfirmPassword"/>
                     <button onClick = {this.CheckPassword.bind(this)} type="button"> Sign up</button>
                 </form>
-                <a href="/login"><button>login</button></a>
+                <Link to="/login"> Login </Link>
             </div>
         )
     }
