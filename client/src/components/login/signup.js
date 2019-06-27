@@ -14,16 +14,13 @@ class Signup extends Component {
     onChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        
         this.setState({
           [name]: value
         });
     };
 
     CheckPassword = () => {
-
         if (this.state.password === this.state.confirmPassword) {
-
             let userData = {
                 email: this.state.email,
                 password: this.state.password
@@ -56,6 +53,8 @@ class Signup extends Component {
                 <p>{this.state.errorMessage}</p>
 
                 <form > 
+                    <input onChange = {this.onChange.bind(this)} type="text" name="firstName" placeholder="First Name"/> 
+                    <input onChange = {this.onChange.bind(this)} type="text" name="lastName" placeholder="Last Name"/>      
                     <input onChange = {this.onChange.bind(this)} type="text" name="email" placeholder="E-mail"/>
                     <input onChange = {this.onChange.bind(this)} type="password" name="password" placeholder="Password"/>
                     <input onChange = {this.onChange.bind(this)} type="password" name="confirmPassword" placeholder="ConfirmPassword"/>

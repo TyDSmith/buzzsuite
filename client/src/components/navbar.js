@@ -11,7 +11,6 @@ class NavBar extends Component {
                     <Navbar.Brand href="#home"><img src="../images/logos/BuzzSuite.png" height="25"></img></Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/campaigns">Campaigns</Nav.Link>
-                        <Nav.Link><Link to="/campaigns">HOME</Link></Nav.Link>
                         <Nav.Link href="/Influencers">Influencers</Nav.Link>
                     </Nav>
                     <Form inline >

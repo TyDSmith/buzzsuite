@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom'
 const API = require("../utility/API").default
 
 class Login extends Component {
     constructor(props){
         super(props);
+        console.log (props)
         this.state = {};
     };
 
@@ -31,7 +33,8 @@ class Login extends Component {
                             errorMessage: "Account not found / Password does not match with our records"
                         })
                     } else {
-                        alert("logged in")
+                        console.log (this.props)
+                        this.props.updateState(account)
                     }
                 })
             .catch((errorMessage)=> {
