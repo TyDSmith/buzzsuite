@@ -47,7 +47,7 @@ class Login extends Component {
                         <br />
                         <button onClick = {this.signin.bind(this)} type="button" class="login-form-button">Submit</button>
                     </form>
-                    <a href="/signup"><button>Sign up</button></a>
+                    <Link to="/signup"> <button>Sign up</button> </Link>
                     <div class="forgot-password">
                         <Link to="/forgotpassword"> Forgot your password? </Link>
                     </div>
