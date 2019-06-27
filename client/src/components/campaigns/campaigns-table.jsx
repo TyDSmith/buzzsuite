@@ -2,16 +2,32 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import { makeData } from "../../Utils";
+import API from "../../Utils";
 
 class CampaignsTable extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: makeData()
-    };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     data: makeData()
+  //   };
+  // }
+
+  state = {
+    influencers: []
+  };
+
+  componentDidMount() {
+    this.loadInfluencers();
   }
-  render() {
+
+  loadInfluencers = () => {
+    API.getInfluencers()
+      .then(res => this.setState({ influencers: res.data }))
+      .catch(err => console.log(err));
+  };
+
+render() {
+    
     const { data } = this.state;
     return (
       <div>

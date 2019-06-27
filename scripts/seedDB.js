@@ -17,7 +17,6 @@ const twitterData = [
     influencerAccount: "Twet_influ",
     service: "tweet",
     client: "Vizio",
-    date: Date.now,
     internalCost: 200,
     markUP: 85,
     MU: 42.5,
@@ -40,7 +39,6 @@ const twitterData = [
     influencerAccount: "Twet_influ",
     service: "tweet",
     client: "Sony",
-    date: Date.now,
     internalCost: 200,
     markUP: 85,
     MU: 42.5,
@@ -63,7 +61,6 @@ const twitterData = [
     influencerAccount: "Twet_influ",
     service: "tweet",
     client: "Target",
-    date: Date.now,
     internalCost: 200,
     markUP: 85,
     MU: 42.5,
@@ -86,7 +83,6 @@ const twitterData = [
     influencerAccount: "Twet_influ",
     service: "tweet",
     client: "Stater Brothers",
-    date: Date.now,
     internalCost: 200,
     markUP: 85,
     MU: 42.5,
@@ -109,7 +105,6 @@ const twitterData = [
     influencerAccount: "Twet_influ",
     service: "tweet",
     client: "Lakers",
-    date: Date.now,
     internalCost: 200,
     markUP: 85,
     MU: 42.5,
@@ -130,9 +125,10 @@ const twitterData = [
 // console.log(db.twitterModel)
 db.twitterModel
   .remove({})
-  .then(() => db.twitterModel.collection.insertMany(twitterData))
+  .then(() => db.twitterModel.insertMany(twitterData))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log(data)
+    // console.log(data.result + " records inserted!");
     process.exit(0);
   })
   .catch(err => {
