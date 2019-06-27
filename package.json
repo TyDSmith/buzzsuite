@@ -32,7 +32,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.3.16",
     "namor": "^1.1.2",
-    "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-modal": "^3.8.1",

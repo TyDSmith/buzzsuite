@@ -5,9 +5,8 @@ import "react-table/react-table.css";
 import API from "../../Utils";
 
 class CampaignsTable extends Component {
-<<<<<<< HEAD
-  // constructor() {
-  //   super();
+  // constructor(props) {
+  //   super(props);
   //   this.state = {
   //     data: makeData()
   //   };
@@ -23,23 +22,11 @@ class CampaignsTable extends Component {
 
   loadInfluencers = () => {
     API.getInfluencers()
-      // .then(res => this.setState({ influencers: res.data }))
-      .then(res => console.log(res.data))
+      .then(res => this.setState({ influencers: res.data }))
       .catch(err => console.log(err));
-      console.log(this.data)
   };
-=======
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: makeData()
-    };
-  }
 
-  
->>>>>>> 8670c9dadafa5edcec4d342579db8d10fb734d82
-
-  render() {
+render() {
     
     const { data } = this.state;
     return (

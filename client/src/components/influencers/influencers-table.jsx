@@ -40,7 +40,7 @@ class InfluencersTable extends Component {
                 {
                  Header:"Accounts",
                  id: "Accounts",
-              
+                 accessor: "hello world"
                 },
                 {
                   Header: "Channel",
