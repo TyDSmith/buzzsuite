@@ -12,9 +12,12 @@ class NavBar extends Component {
               <img src="../images/logos/BuzzSuite.png" height="25" />
             </Navbar.Brand>
             <Nav className="mr-auto">
-              <Nav.Link href="/campaigns">Campaigns</Nav.Link>
-              <Nav.Link href="/Influencers">Influencers</Nav.Link>
-              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+              <Link to="/campaigns"> Campaigns </Link>
+              <Link to="/Influencers"> Influencers </Link>
+              <Link to="/dashboard"> Dashboard </Link>
+              {/* <Nav.Link to="/campaigns">Campaigns</Nav.Link>
+              <Nav.Link to="/Influencers">Influencers</Nav.Link>
+              <Nav.Link to="/dashboard">Dashboard</Nav.Link> */}
             </Nav>
             <Form inline>
               <Nav.Link href="/login">Login</Nav.Link>

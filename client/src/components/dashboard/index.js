@@ -6,7 +6,7 @@ function Dashboard(props) {
         <div>
 
             <p>Dashboard</p>
-            <h3>Woooodashboard</h3>
+            <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
             <TwitterCPMReport />
 
         </div>
