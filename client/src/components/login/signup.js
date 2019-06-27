@@ -20,11 +20,18 @@ class Signup extends Component {
     };
 
     CheckPassword = () => {
+        
+
         if (this.state.password === this.state.confirmPassword) {
             let userData = {
+                firstName:  this.state.firstName,
+                lastName: this.state.lastName,
                 email: this.state.email,
                 password: this.state.password
             }
+
+            console.log (this.state)
+            console.log (userData)
             API.userSignup(userData)
             .then(
                 (account) => {

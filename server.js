@@ -3,7 +3,6 @@ const express = require("express");
 // const cors = require("cors");
 
 const cookieSession = require("cookie-session")
-const passport = require("passport")
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -26,8 +25,8 @@ app.use(cookieSession({
 
 // Passport initialize
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Add routes, both API and view
 app.use(routes);
