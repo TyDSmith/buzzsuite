@@ -76,3 +76,11 @@
 .nav-link {
   color: rgb(0, 162, 255);
 }
+
+img.social {
+  text-align: right;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-left: 80px;
+}

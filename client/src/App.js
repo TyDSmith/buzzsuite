@@ -8,7 +8,7 @@ import Signup from './components/login/signup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Campaigns from './components/campaigns';
 import SingleInfluencer from './components/single-influencer';
-
+import Home from "./components/home";
 
 class App extends React.Component {
   render() {
@@ -22,6 +22,7 @@ class App extends React.Component {
           <Route path="/signup" component={Signup} />
           <Route path="/campaigns" component={Campaigns} />
           <Route path="/influencer" component={SingleInfluencer} />
+          <Route path="/home" component={Home} />
 
         </div>
       </Router >
