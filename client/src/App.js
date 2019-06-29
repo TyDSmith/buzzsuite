@@ -31,8 +31,6 @@ class App extends React.Component {
     } else {
       alert("Account Not Found / Password Does Not Match!")
     }
-    
-    
   }
 
   signout = () =>{
@@ -51,7 +49,6 @@ class App extends React.Component {
     console.log(this.state.UserInfo);
 
     return (
-
 
       <Router>
         <div className="App">
@@ -86,12 +83,10 @@ class App extends React.Component {
             render={(props) => (this.state.UserLoggedIn ? 
               (<Redirect to="/campaigns" />) : 
               (<Login {...props} updateState={this.updateState}/>))}
-            // render={(props)=> <Login {...props} updateState={this.updateState} />} 
             />
 
           <Route path="/signup" component={Signup} />
           <Route path="/forgotpassword" component={forgotPassword} />
-          
           
         </div>
 

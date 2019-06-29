@@ -13,7 +13,6 @@ export default {
     return axios.post("/auth/user/signin", userData);
   },
   userVerify: function(userData) {
-    console.log (userData)
     return axios.post("/auth/user/forgotpassword", userData);
   },
   forgotPassword: function (userData) {

@@ -55,7 +55,6 @@ module.exports = {
   },
 
   signIn: function(req, res) {
-    console.log (req.body)
     db.userModel
       .findOne( { $and: [ { email:req.body.email,password: req.body.password} ] } )
       .then(dbModel => res.json(dbModel))
@@ -80,7 +79,6 @@ module.exports = {
   },
 
   updatePassword: function(req, res) {
-    console.log (req.body)
     db.userModel
       .findOneAndUpdate({email:req.body.email},{password:req.body.password})
       .then(dbModel => res.json(dbModel))
