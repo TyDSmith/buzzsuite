@@ -55,8 +55,12 @@ module.exports = {
   },
 
   signIn: function(req, res) {
+    console.log (req.body)
     db.userModel
-      .findOne({email:req.body.email,password: req.body.password})
+      .findOne([
+           [{ email:req.body.email, 
+                  password: req.body.password}]
+      ])
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -67,8 +71,4 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  
-
-
-  
 };
