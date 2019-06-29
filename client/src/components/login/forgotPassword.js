@@ -26,11 +26,14 @@ class ForgotPassword extends Component {
     findUserName = () => {
         
         API.userVerify({email: this.state.email, firstName: this.state.firstName,}).then((account)=>{
-            if (account.data.email === this.state.email) {
-                this.setState({emailFound:true})
+            
+            if (account.data !== null && account.data.email === this.state.email) {
+                this.setState({emailFound:true, errorMessage: ""})
+            } else {
+                this.setState({errorMessage: "Account not verified"})
             }
-        })
-    }
+        });
+    };
 
     CheckPassword = () => {
         if (this.state.newPassword === this.state.newPasswordConfirm) {
@@ -38,16 +41,16 @@ class ForgotPassword extends Component {
             let userData = {
                 email: this.state.email,
                 password: this.state.newPassword
-            }
+            };
             API.forgotPassword(userData).then((account)=>{
                 if (account.status === 200) {
-                    alert("Password Successfully Updated")
+                    this.setState({errorMessage: "Password Successfully Updated", emailFound:false})
                 }
-            })
+            });
 
         } else {
             this.setState({errorMessage: "Password Dose Not Match"})
-        }
+        };
     }
 
     render() {
