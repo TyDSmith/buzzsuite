@@ -23,8 +23,15 @@ class App extends React.Component {
 
   updateState = (UserInfo) => {
     
-    this.setState({UserInfo: UserInfo,UserLoggedIn: true})
-    // this.setState({UserLoggedIn: true})
+    this.setState({UserInfo: UserInfo})
+
+    if (this.state.UserInfo.data !== null ) {
+    
+      this.setState({UserLoggedIn: true})
+    } else {
+      alert("Account Not Found / Password Does Not Match!")
+    }
+    
     
   }
 
