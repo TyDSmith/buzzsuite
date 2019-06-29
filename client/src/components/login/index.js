@@ -22,18 +22,12 @@ class Login extends Component {
 
     signin = () => {
         let userData = {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
             email: this.state.email,
             password: this.state.password
-            
         }
-        console.log (userData)
         API.userSignin(userData)
         .then((account) => this.props.updateState(account))
-
     }
-
 
     render () {
         return (

@@ -10,15 +10,15 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findOne: function(req, res) {
-    console.log (req.body)
-    console.log (req.query)
-    db.userModel
-      .findOne({email: req.body})
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+  // findOne: function(req, res) {
+  //   console.log (req.body)
+  //   console.log (req.query)
+  //   db.userModel
+  //     .findOne({email: req.body})
+  //     .sort({ date: -1 })
+  //     .then(dbModel => res.json(dbModel))
+  //     .catch(err => res.status(422).json(err));
+  // },
   findById: function(req, res) {
     db.userModel
       .findById(req.params.id)
@@ -55,8 +55,9 @@ module.exports = {
   },
 
   signIn: function(req, res) {
+    console.log (req.body)
     db.userModel
-      .findOne({email:req.body.email,password: req.body.password})
+      .findOne( { $and: [ { email:req.body.email,password: req.body.password} ] } )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -67,8 +68,22 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  
 
+  userVerify: function(req, res) {
+    db.userModel
+      .findOne({ $and: [
+        {email: req.body.email, firstName: req.body.firstName}
+      ]}
+        )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
-  
+  updatePassword: function(req, res) {
+    console.log (req.body)
+    db.userModel
+      .findOneAndUpdate({email:req.body.email},{password:req.body.password})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 };

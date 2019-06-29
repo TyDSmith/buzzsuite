@@ -6,7 +6,6 @@ import App from "../App";
 class NavBar extends Component {
     
     render() {
-
     let UserLoggedIn = this.props.UserLoggedIn;
     let loginButton;
     if (UserLoggedIn) {
