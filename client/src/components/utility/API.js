@@ -9,10 +9,14 @@ export default {
     return axios.post("/auth/user/signup", userData);
   },
   userSignin: function(userData) {
+    
     return axios.post("/auth/user/signin", userData);
   },
-  userSignout: function(userData) {
-    return axios.post("/auth/user/signout", userData);
+  userVerify: function(userData) {
+    return axios.post("/auth/user/forgotpassword", userData);
   },
+  forgotPassword: function (userData) {
+    return axios.put("/auth/user/forgotpassword", userData);
+  }
 
 };
