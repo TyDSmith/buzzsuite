@@ -36,7 +36,7 @@ class Campaigns extends Component {
 
             {
                 Header: "Channel",
-                accessor: "service"
+                accessor: "channel"
             },
 
             {
@@ -50,12 +50,7 @@ class Campaigns extends Component {
             },
 
             {
-                Header: "UserName",
-                accessor: "influencerAccount"
-            },
-
-            {
-                Header: "CPM",
+                Header: "$ CPM",
                 accessor: "CPM"
             },
 
@@ -68,6 +63,8 @@ class Campaigns extends Component {
 
 
     return (
+
+        
         <ReactTable
             defaultPageSize={8}
             columns = {columns}
