@@ -9,6 +9,7 @@ import forgotPassword from './components/login/forgotPassword'
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Campaigns from './components/campaigns';
 import SingleInfluencer from './components/single-influencer';
+import Home from "./components/home";
 
 class App extends React.Component {
 
@@ -89,6 +90,8 @@ class App extends React.Component {
           <Route path="/signup" component={Signup} />
           <Route path="/forgotpassword" component={forgotPassword} />
 
+          <Route path="/home" component={Home} />
+          
         </div>
 
 
