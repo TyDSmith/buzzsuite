@@ -5,23 +5,25 @@ import "react-table/react-table.css";
 import API from '../utility/API';
 
 class InfluencersTable extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     data: makeData()
-  //   };
-  // }
-  state = {
-    influencers: []
-  };
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+  
 
   componentDidMount() {
+    console.log("Fuck off")
     this.loadInfluencers();
   }
+  
 
   loadInfluencers = () => {
+    console.log("hello world")
     API.getInfluencers()
-      .then(res => this.setState({ influencers: res.data }))
+      .then(res => this.setState({ influencers: res.data }), console.log(this.state))
       .catch(err => console.log(err));
   };
 

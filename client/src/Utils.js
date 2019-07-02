@@ -44,7 +44,7 @@ import axios from "axios";
 export default {
   // Gets all books
   getInfluencers: function() {
-      console.log ("get influencers")
+      // console.log ("get influencers")
     return axios.get("/api/twitter");
   },
   // Gets the book with the given id

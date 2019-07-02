@@ -5,6 +5,9 @@ var twitterSchema = new Schema({
   bs_account_id: {
     type: Number,
   },
+  channel:{
+      type: String
+  },
   urlLink: {
     type: String
   },
