@@ -1,4 +1,6 @@
 const db = require("../models");
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 // Defining methods for the.twitterModelsController
 module.exports = {
@@ -10,15 +12,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  // findOne: function(req, res) {
-  //   console.log (req.body)
-  //   console.log (req.query)
-  //   db.userModel
-  //     .findOne({email: req.body})
-  //     .sort({ date: -1 })
-  //     .then(dbModel => res.json(dbModel))
-  //     .catch(err => res.status(422).json(err));
-  // },
+  
   findById: function(req, res) {
     db.userModel
       .findById(req.params.id)
@@ -31,33 +25,43 @@ module.exports = {
       .then(dbModel => {res.json(dbModel)})
       .catch(err => res.status(422).json(err));
   },
-  // update: function(req, res) {
-  //   db.userModel
-  //     .findOneAndUpdate({ _id: req.params.id }, req.body)
-  //     .then(dbModel => res.json(dbModel))
-  //     .catch(err => res.status(422).json(err));
-  // },
-  remove: function(req, res) {
-    db.userModel
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+  
 
   // Login
 
   signUp: (req, res) => {
-    db.userModel
-        .create(req.body)
-        .then(dbModel => {res.json(dbModel)})
-        .catch(err => res.status(422).json(err));
+
+    function createNewUser () {
+      db.userModel
+      .create(req.body)
+      .then(dbModel => {res.json(dbModel)})
+      .catch(err => res.status(422).json(err))
+    }
+
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+      bcrypt.hash(req.body.password, salt, function(err, hash) {
+        req.body.password= hash
+        createNewUser()
+      });
+    });
   },
 
   signIn: function(req, res) {
+      
     db.userModel
-      .findOne( { $and: [ { email:req.body.email,password: req.body.password} ] } )
-      .then(dbModel => res.json(dbModel))
+      .findOne( { email:req.body.email } )
+      .then((dbModel) => {
+        
+        bcrypt.compare(req.body.password, dbModel.password, function(err, result) {
+          returnJSON(result)
+        })
+        
+        function returnJSON (result) {
+          if (result) {
+            res.json(dbModel)
+          }  
+        }
+      })
       .catch(err => res.status(422).json(err));
   },
 
@@ -79,9 +83,18 @@ module.exports = {
   },
 
   updatePassword: function(req, res) {
-    db.userModel
+    function  updatePassword() {
+      db.userModel
       .findOneAndUpdate({email:req.body.email},{password:req.body.password})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+    }
+
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+      bcrypt.hash(req.body.password, salt, function(err, hash) {
+        req.body.password= hash
+        updatePassword();
+      });
+    });
   },
 };
