@@ -10,7 +10,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    console.log(req.params)
+    
     db.twitterModel
       .find({bs_account_id : req.params.id})
       .then(dbModel => res.json(dbModel))

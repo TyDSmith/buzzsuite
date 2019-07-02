@@ -1,15 +1,14 @@
 import React, { Component }from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom"
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import './login.css';
 import API from '../utility/API';
+
 
 class Login extends Component {
 
     constructor(props){
         super(props);
-        this.state = {
-            
-        };
+        this.state = {};
     };
 
     onChange = (event) => {
@@ -27,7 +26,7 @@ class Login extends Component {
         }
         API.userSignin(userData)
         .then((account) => this.props.updateState(account))
-    }
+    };
 
     render () {
         return (
@@ -47,8 +46,8 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Login;

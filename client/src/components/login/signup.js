@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom"
 import API from '../utility/API';
 
 
+
 class Signup extends Component {
 
     constructor(props){
@@ -21,7 +22,6 @@ class Signup extends Component {
     };
 
     CheckPassword = () => {
-        
 
         if (this.state.password === this.state.confirmPassword) {
             let userData = {
@@ -31,13 +31,12 @@ class Signup extends Component {
                 password: this.state.password
             }
 
-            console.log (this.state)
-            console.log (userData)
+
             API.userSignup(userData)
             .then(
                 (account) => {
                     if (account.status === 200) {
-                        alert("Account Created") 
+                        this.setState({errorMessage: "Account Created"})
                     };
                 })
             .catch((errorMessage)=> {
@@ -51,8 +50,8 @@ class Signup extends Component {
             this.setState({
                 errorMessage: "Password Does not match"
             })
-        }
-    }
+        };
+    };
 
     render() {
         return (
