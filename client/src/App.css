@@ -92,3 +92,11 @@
 .navlinks:focus {
   text-decoration: none;
 }
+
+.ReactTable .rt-noData {
+  z-index: 0 !important;
+}
+
+.slide-pane {
+  background: #eee;
+}
