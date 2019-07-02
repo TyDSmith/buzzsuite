@@ -1,6 +1,8 @@
 # buzzsuite
 
-Dependencies
+Buzzsuite offers advanced social media influencer analytics and tracking.
+
+## Dependencies
 
 - react-router
 - react-table

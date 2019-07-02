@@ -5,9 +5,33 @@ class CampaignInputForm extends Component {
     return (
       <div>
         <h3>Add a campaign</h3>
-        <p>parameter 1</p>
-        <p>parameter 2</p>
-        <p>parameter 3</p>
+        <form>
+          <label>
+            Date:
+            <input type="date" name="date" />
+          </label>
+          <br />
+          <label>
+            URL:
+            <input type="text" name="URL" />
+          </label>
+          <br />
+          <label>
+            Client:
+            <input type="text" name="client" />
+          </label>
+          <br />
+          <label>
+            Impressions:
+            <input type="number" name="impressions" />
+          </label>
+          <br />
+          <label>
+            Cost:
+            <input type="number" name="cost" />
+          </label>
+          <br />
+        </form>
       </div>
     );
   }

@@ -13,7 +13,7 @@ import Home from "./components/home";
 
 class App extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       UserLoggedIn: false,
@@ -23,20 +23,20 @@ class App extends React.Component {
   };
 
   updateState = (UserInfo) => {
-    
-    this.setState({UserInfo: UserInfo})
 
-    if (this.state.UserInfo.data !== null ) {
-    
-      this.setState({UserLoggedIn: true})
+    this.setState({ UserInfo: UserInfo })
+
+    if (this.state.UserInfo.data !== null) {
+
+      this.setState({ UserLoggedIn: true })
     } else {
       alert("Account Not Found / Password Does Not Match!")
     }
   }
 
-  signout = () =>{
-    console.log ("sign out triggered")
-    this.setState({UserLoggedIn: false})
+  signout = () => {
+    console.log("sign out triggered")
+    this.setState({ UserLoggedIn: false })
   }
 
   render() {
@@ -53,38 +53,39 @@ class App extends React.Component {
 
       <Router>
         <div className="App">
-          <NavBar UserLoggedIn={this.state.UserLoggedIn} signout={this.signout}/>
 
-          <Route 
-            path="/campaigns" 
-            render={(props) => (this.state.UserLoggedIn ? 
-            (<Campaigns {...props} UserInfo={this.state.UserInfo}/>) : 
-            (<Redirect to="/login" />) )} />
+          <NavBar UserLoggedIn={this.state.UserLoggedIn} signout={this.signout} />
 
-          <Route 
-            path="/dashboard" 
-            render={(props) => (this.state.UserLoggedIn ? 
-            (<Dashboard {...props} UserInfo={this.state.UserInfo}/>) : 
-            (<Redirect to="/login" />) )} /> 
-          
-          <Route 
-            path="/influencers" 
-            render={(props) => (this.state.UserLoggedIn ? 
-              (<Influencers {...props} UserInfo={this.state.UserInfo}/>) : 
-              (<Redirect to="/login" />) )} /> 
-          
-          <Route 
-            path="/influencer" 
-            render={(props) => (this.state.UserLoggedIn ? 
-              (<SingleInfluencer {...props} UserInfo={this.state.UserInfo}/>) : 
-              (<Redirect to="/login" />) )} /> 
+          <Route
+            path="/campaigns"
+            render={(props) => (this.state.UserLoggedIn ?
+              (<Campaigns {...props} UserInfo={this.state.UserInfo} />) :
+              (<Redirect to="/login" />))} />
 
-          <Route 
-            path="/login" 
-            render={(props) => (this.state.UserLoggedIn ? 
-              (<Redirect to="/campaigns" />) : 
-              (<Login {...props} updateState={this.updateState}/>))}
-            />
+          <Route
+            path="/dashboard"
+            render={(props) => (this.state.UserLoggedIn ?
+              (<Dashboard {...props} UserInfo={this.state.UserInfo} />) :
+              (<Redirect to="/login" />))} />
+
+          <Route
+            path="/influencers"
+            render={(props) => (this.state.UserLoggedIn ?
+              (<Influencers {...props} UserInfo={this.state.UserInfo} />) :
+              (<Redirect to="/login" />))} />
+
+          <Route
+            path="/influencer"
+            render={(props) => (this.state.UserLoggedIn ?
+              (<SingleInfluencer {...props} UserInfo={this.state.UserInfo} />) :
+              (<Redirect to="/login" />))} />
+
+          <Route
+            path="/login"
+            render={(props) => (this.state.UserLoggedIn ?
+              (<Redirect to="/campaigns" />) :
+              (<Login {...props} updateState={this.updateState} />))}
+          />
 
           <Route path="/signup" component={Signup} />
           <Route path="/forgotpassword" component={forgotPassword} />
@@ -93,7 +94,7 @@ class App extends React.Component {
           
         </div>
 
-        {greeting}
+
 
       </Router >
 
