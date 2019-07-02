@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
-import CampaignInputForm from "../single-influencer/campaign-input-form";
 
-class AddInfluencerButton extends Component {
+class AddCampaignButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +23,7 @@ class AddInfluencerButton extends Component {
           class="add-influencer-button"
           onClick={() => this.setState({ isPaneOpen: true })}
         >
-          Add Influencer
+          Add Campaign
         </button>
         <div style={{ marginTop: "32px" }} />
         <SlidingPane
@@ -32,13 +31,15 @@ class AddInfluencerButton extends Component {
           overlayClassName="some-custom-overlay-class"
           isOpen={this.state.isPaneOpen}
           title="Add Influencer"
+          subtitle="Optional subtitle."
           width="500px"
           onRequestClose={() => {
             // triggered on "<" on left top click or on outside click
             this.setState({ isPaneOpen: false });
           }}
         >
-          <CampaignInputForm />
+          <div>And I am pane content</div>
+          <br />
         </SlidingPane>
       </div>
     );
@@ -92,4 +93,4 @@ class AddInfluencerButton extends Component {
 // //     </div>
 // //   );
 
-export default AddInfluencerButton;
+export default AddCampaignButton;

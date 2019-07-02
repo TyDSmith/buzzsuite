@@ -52,7 +52,7 @@ class App extends React.Component {
 
       <Router>
         <div className="App">
-          {greeting}
+
           <NavBar UserLoggedIn={this.state.UserLoggedIn} signout={this.signout} />
 
           <Route
