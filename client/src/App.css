@@ -76,3 +76,19 @@
 .nav-link {
   color: rgb(0, 162, 255);
 }
+
+.navlinks {
+  margin-right: 10px;
+  color: white;
+}
+
+.navlinks:active {
+  text-decoration: none;
+}
+.navlinks:hover {
+  text-decoration: none;
+  color: #00eccf;
+}
+.navlinks:focus {
+  text-decoration: none;
+}
