@@ -3,13 +3,13 @@ import InfluencerProfile from './influencer-profile';
 import CampaignInputForm from './campaign-input-form';
 import InfluencerHistory from './influencer-history';
 import '../single-influencer/single-influencer.css';
-import API from '../../Utils'
+import API from '../utility/API';
 
 function SingleInfluencer(props) {
 
-function getHistory() {
-    API.getInfluencers().then((data) => console.log(data))
-};
+// function getHistory() {
+//     API.getInfluencers().then((data) => console.log(data))
+
 
 
 
@@ -32,6 +32,5 @@ function getHistory() {
 
         </div>
     )
-}
-
+};
 export default SingleInfluencer;

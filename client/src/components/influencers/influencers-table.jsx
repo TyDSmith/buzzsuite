@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import API from "../../Utils";
+import API from '../utility/API';
 
 class InfluencersTable extends Component {
   // constructor() {
@@ -45,7 +45,7 @@ class InfluencersTable extends Component {
                 {
                   Header: "Channel",
                   id: "channel",
-                  accessor: "hello world"
+                  accessor: "twitter"
                 },
                 {
                   Header: "Product",
