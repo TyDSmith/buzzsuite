@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
 import CampaignsTable from './campaigns-table';
+<<<<<<< HEAD
 import ReactTable from "react-table";
 import "react-table/react-table.css"
+=======
+import AddCampaignButton from './add-campaign-btn';
+>>>>>>> 116d1a3e8ddbf3402ac8bcd606914491e5cb41fc
 // import CampaignsFilter from '../campaigns-filter.jsx';
 import API from '../utility/API';
 
+<<<<<<< HEAD
 class Campaigns extends Component {
     constructor(props) {
         super(props);
@@ -63,6 +68,21 @@ class Campaigns extends Component {
 
 
     return (
+=======
+function Campaigns(props) {
+
+    return (
+        <div>
+            <div class="page-heading">
+                <h1 class="page-title">Campaigns</h1>
+            </div>
+            <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
+            <CampaignsTable />
+            <AddCampaignButton />
+        </div>
+    )
+}
+>>>>>>> 116d1a3e8ddbf3402ac8bcd606914491e5cb41fc
 
         
         <ReactTable

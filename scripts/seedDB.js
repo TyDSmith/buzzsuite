@@ -6,7 +6,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/orlandoDB", 
+  "mongodb://localhost/ty_buzzsuite",
   { useNewUrlParser: true }
 );
 
@@ -24,7 +24,7 @@ const twitterData = [
     CPM: 16.51,
     CPC: 6.63,
     CPE: 1.18,
-    Impressions:17586,
+    Impressions: 17586,
     Engagement: 241,
     linkClicks: 43,
     profileClicks: 5,
@@ -47,7 +47,7 @@ const twitterData = [
     CPM: 16.51,
     CPC: 6.63,
     CPE: 1.18,
-    Impressions:17586,
+    Impressions: 17586,
     Engagement: 241,
     linkClicks: 43,
     profileClicks: 5,
@@ -70,7 +70,7 @@ const twitterData = [
     CPM: 16.51,
     CPC: 6.63,
     CPE: 1.18,
-    Impressions:17586,
+    Impressions: 17586,
     Engagement: 241,
     linkClicks: 43,
     profileClicks: 5,
@@ -93,7 +93,7 @@ const twitterData = [
     CPM: 16.51,
     CPC: 6.63,
     CPE: 1.18,
-    Impressions:17586,
+    Impressions: 17586,
     Engagement: 241,
     linkClicks: 43,
     profileClicks: 5,
@@ -116,7 +116,7 @@ const twitterData = [
     CPM: 16.51,
     CPC: 6.63,
     CPE: 1.18,
-    Impressions:17586,
+    Impressions: 17586,
     Engagement: 241,
     linkClicks: 43,
     profileClicks: 5,

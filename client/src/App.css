@@ -76,3 +76,35 @@
 .nav-link {
   color: rgb(0, 162, 255);
 }
+
+img.social {
+  text-align: right;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-left: 80px;
+}
+
+.navlinks {
+  margin-right: 10px;
+  color: white;
+}
+
+.navlinks:active {
+  text-decoration: none;
+}
+.navlinks:hover {
+  text-decoration: none;
+  color: #00eccf;
+}
+.navlinks:focus {
+  text-decoration: none;
+}
+
+.ReactTable .rt-noData {
+  z-index: 0 !important;
+}
+
+.slide-pane {
+  background: #eee;
+}
