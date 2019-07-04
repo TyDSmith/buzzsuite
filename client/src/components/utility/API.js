@@ -2,10 +2,8 @@ import axios from "axios";
 
 export default {
 
-
   // Local Login
   userSignup: function(userData) {
-    console.log ("API userSignup")
     return axios.post("/auth/user/signup", userData);
   },
   userSignin: function(userData) {
@@ -17,6 +15,17 @@ export default {
   },
   forgotPassword: function (userData) {
     return axios.put("/auth/user/forgotpassword", userData);
-  }
+  },
+
+  // Twitter Database
+  newCampaign: function(userData) {
+    return axios.post("/api/twitter/campaign", userData);
+  },
+
+  newInfluencer: function(userData) {
+    return axios.post("/api/twitter/influencer", userData);
+  },
+
+  
 
 };

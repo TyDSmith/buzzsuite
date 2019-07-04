@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var twitterSchema = new Schema({
   bs_account_id: {
-    type: Number,
+    type: String,
   },
   urlLink: {
     type: String

@@ -17,6 +17,10 @@ class AddCampaignButton extends Component {
     Modal.setAppElement(this.el);
   }
 
+  isPaneOpen = () => {
+    this.setState({isPaneOpen: false})
+  }
+
   render() {
     return (
       <div ref={ref => (this.el = ref)}>
@@ -38,58 +42,11 @@ class AddCampaignButton extends Component {
             this.setState({ isPaneOpen: false });
           }}
         >
-          <CampaignInputForm />
+          <CampaignInputForm isPaneOpen={this.isPaneOpen} UserInfo={this.props.UserInfo}/>
         </SlidingPane>
       </div>
     );
   }
 }
-
-// class AddInfluencerButton extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       showModal: false
-//     };
-
-//     this.handleOpenModal = this.handleOpenModal.bind(this);
-//     this.handleCloseModal = this.handleCloseModal.bind(this);
-//   }
-
-//   handleOpenModal() {
-//     this.setState({ showModal: true });
-//   }
-
-//   handleCloseModal() {
-//     this.setState({ showModal: false });
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <button onClick={this.handleOpenModal}>Add Influencer</button>
-//         <ReactModal
-//           isOpen={this.state.showModal}
-//           contentLabel="Minimal Modal Example"
-//         >
-//           <div>
-//             <h2 class="modal-title">Add an Influencer</h2>
-//             <button class="exit-modal" onClick={this.handleCloseModal}>
-//               close
-//             </button>
-//           </div>
-//         </ReactModal>
-//       </div>
-//     );
-//   }
-// }
-
-// const props = {};
-
-// //   return (
-// //     <div class="add-influencer">
-// //       <button class="btn-primary btn">Add an influencer</button>
-// //     </div>
-// //   );
 
 export default AddCampaignButton;
