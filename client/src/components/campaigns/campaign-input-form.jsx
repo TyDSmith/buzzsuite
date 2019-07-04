@@ -5,7 +5,7 @@ class CampaignInputForm extends Component {
     return (
       <div>
         <h3>Add a campaign</h3>
-        <form>
+        <form class="add-form">
           <label>
             Influencer:
             <input type="text" name="account-name" />

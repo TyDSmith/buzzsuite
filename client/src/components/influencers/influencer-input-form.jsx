@@ -5,7 +5,7 @@ class InfluencerInputForm extends Component {
     return (
       <div>
         <h3>Add an Influencer</h3>
-        <form>
+        <form class="add-form">
           <label>
             Name:
             <input type="text" name="account-name" />

@@ -119,3 +119,25 @@ img.social {
 .slide-pane {
   background: #eee;
 }
+
+/* Forms */
+
+.add-form label {
+  text-align: left;
+}
+
+.add-form input {
+  padding: 9px 10px;
+  border-radius: 3px;
+  border: 1px solid #cbd6e2;
+  font-size: 16px;
+  transition: all 0.15s ease-out;
+  background-color: #f5f8fa;
+  color: #33475b;
+  display: block;
+  height: 40px;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%;
+}

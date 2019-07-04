@@ -11,7 +11,7 @@ class NavBar extends Component {
         let UserLoggedIn = this.props.UserLoggedIn;
         let loginButton;
         if (UserLoggedIn) {
-            loginButton = <Link onClick={this.props.signout} className="navlinks"> Signout </Link>
+            loginButton = <Link onClick={this.props.signout} className="navlinks"> Sign Out </Link>
         } else {
             loginButton = <Link to="/login"> Login </Link>
         }

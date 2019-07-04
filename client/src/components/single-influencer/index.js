@@ -9,7 +9,6 @@ function SingleInfluencer(props) {
     return (
         <div>
             <h2>Influencer name goes here</h2>
-            <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
             <div class="single-influencer-div">
                 <div class="column column-left">
                     <InfluencerProfile />

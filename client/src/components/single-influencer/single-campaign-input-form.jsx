@@ -5,7 +5,7 @@ class SingleCampaignInputForm extends Component {
     return (
       <div>
         <h3>Add a campaign</h3>
-        <form>
+        <form class="add-form">
           <label>
             Date:
             <input type="date" name="date" />
