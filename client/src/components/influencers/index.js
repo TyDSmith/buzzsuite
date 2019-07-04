@@ -9,9 +9,7 @@ function Influencers(props) {
         <div>
             <div class="page-heading">
                 <h1 class="page-title">Influencers</h1>
-                <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
-                <AddInfluencerButton />
-
+                <span class="add-btn-span"><AddInfluencerButton /></span>
             </div>
             <div id="influencersfilterdiv">
                 <InfluencersFilter />
