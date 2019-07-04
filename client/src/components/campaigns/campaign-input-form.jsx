@@ -7,6 +7,11 @@ class CampaignInputForm extends Component {
         <h3>Add a campaign</h3>
         <form>
           <label>
+            Influencer:
+            <input type="text" name="account-name" />
+          </label>
+          <br />
+          <label>
             Date:
             <input type="date" name="date" />
           </label>
