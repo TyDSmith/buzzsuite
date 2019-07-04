@@ -13,6 +13,10 @@ router
   .put(twitterController.update)
   .delete(twitterController.remove);
 
+router
+  .route("/campaign")
+  .post(twitterController.create);
+
   router
   .route("/influencer/:account")
   .get(twitterController.findByInfluencer)

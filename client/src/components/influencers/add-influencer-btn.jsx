@@ -14,6 +14,7 @@ class AddInfluencerButton extends Component {
   }
 
   componentDidMount() {
+    console.log (this.props)
     Modal.setAppElement(this.el);
   }
 
@@ -38,7 +39,7 @@ class AddInfluencerButton extends Component {
             this.setState({ isPaneOpen: false });
           }}
         >
-          <CampaignInputForm />
+          <CampaignInputForm UserInfo={this.props.UserInfo}/>
         </SlidingPane>
       </div>
     );
