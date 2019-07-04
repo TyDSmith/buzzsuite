@@ -1,6 +1,6 @@
 import React from 'react';
 import InfluencerProfile from './influencer-profile';
-import CampaignInputForm from './campaign-input-form';
+import SingleCampaignInputForm from './single-campaign-input-form';
 import InfluencerHistory from './influencer-history';
 import '../single-influencer/single-influencer.css';
 import API from '../utility/API';
@@ -26,7 +26,7 @@ function SingleInfluencer(props) {
                     <InfluencerHistory />
                 </div>
                 <div class="column column-right">
-                    <CampaignInputForm />
+                    <SingleCampaignInputForm />
                 </div>
             </div>
 
