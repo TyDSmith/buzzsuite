@@ -6,15 +6,13 @@ import AddCampaignButton from './add-campaign-btn';
 
 
 function Campaigns(props) {
-
     return (
         <div>
             <div class="page-heading">
                 <h1 class="page-title">Campaigns</h1>
+                <span class="add-btn-span"><AddCampaignButton /></span>
             </div>
-            <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
             <CampaignsTable />
-            <AddCampaignButton />
         </div>
     )
 }

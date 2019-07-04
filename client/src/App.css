@@ -26,6 +26,7 @@
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 28px;
+  float: left;
   margin-left: 20px;
 }
 
@@ -38,6 +39,7 @@
   min-height: 62px;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   font-size: 20px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -56,11 +58,20 @@
   color: white;
 }
 
+.navbar-brand {
+  height: 59px;
+}
+
 /* Page Header */
 
 .page-heading {
+  display: flex;
   border-bottom: 1px solid #cbd6e2;
   margin: 15px 3px;
+}
+
+.add-btn-span {
+  flex: 1;
 }
 
 .ReactTable {
