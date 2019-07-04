@@ -22,6 +22,10 @@ export default {
     return axios.post("/api/twitter/campaign", userData);
   },
 
+  newInfluencer: function(userData) {
+    return axios.post("/api/twitter/influencer", userData);
+  },
+
   
 
 };

@@ -1,37 +1,37 @@
 import React, { Component } from "react";
 import API from "../utility/API"
 
-class CampaignInputForm extends Component {
-  constructor(props){
-    super(props);
-    this.state = {};
-  };
+class SingleCampaignInputForm extends Component {
 
-  onChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  addCampaign = () => {
-    let campaignData = {
-      bs_account_id: this.props.UserInfo.data._id,
-      urlLink: this.state.URL,
-      influencerAccount: `${this.props.UserInfo.data.firstName} ${this.props.UserInfo.data.lastName}`,
-      client: this.state.client,
-      date: this.state.date,
-      Impressions: this.state.impressions,
-      Cost: this.state.cost
+    constructor(props){
+      super(props);
+      this.state = {};
+    };
+  
+    onChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      this.setState({
+        [name]: value
+      });
+    };
+  
+    addCampaign = () => {
+      let campaignData = {
+        bs_account_id: this.props.UserInfo.data._id,
+        urlLink: this.state.URL,
+        influencerAccount: `${this.props.UserInfo.data.firstName} ${this.props.UserInfo.data.lastName}`,
+        client: this.state.client,
+        date: this.state.date,
+        Impressions: this.state.impressions,
+        Cost: this.state.cost
+      }
+      console.log (this.props)
+      console.log (this.state)
+      console.log (campaignData)
+  
+      API.newCampaign(campaignData).then(campaign => console.log (campaign))
     }
-    console.log (this.props)
-    console.log (this.state)
-    console.log (campaignData)
-
-    API.newCampaign(campaignData).then(campaign => console.log (campaign))
-  };
-
 
   render() {
     return (
@@ -68,7 +68,7 @@ class CampaignInputForm extends Component {
         </form>
       </div>
     );
-  }
-}
+  };
+};
 
-export default CampaignInputForm;
+export default SingleCampaignInputForm;

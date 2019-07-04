@@ -17,6 +17,10 @@ router
   .route("/campaign")
   .post(twitterController.create);
 
+router
+  .route("/influencer")
+  .post(twitterController.createInfluencer);
+
   router
   .route("/influencer/:account")
   .get(twitterController.findByInfluencer)
