@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
-import CampaignInputForm from "../single-influencer/campaign-input-form";
+import InfluencerInputForm from "./influencer-input-form";
 
 class AddInfluencerButton extends Component {
   constructor(props) {
@@ -38,7 +38,11 @@ class AddInfluencerButton extends Component {
             this.setState({ isPaneOpen: false });
           }}
         >
-          <CampaignInputForm />
+          <InfluencerInputForm />
+          <p>
+            To add a campaign to an existing influencer please click on the
+            influencer in the table
+          </p>
         </SlidingPane>
       </div>
     );
