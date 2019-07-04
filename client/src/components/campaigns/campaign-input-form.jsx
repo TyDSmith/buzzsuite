@@ -14,9 +14,12 @@ class CampaignInputForm extends Component {
     this.setState({
       [name]: value
     });
+    console.log (this.state)
   };
 
   addCampaign = () => {
+    console.log (this.state)
+
     let campaignData = {
       bs_account_id: this.props.UserInfo.data._id,
       urlLink: this.state.URL,
@@ -27,7 +30,12 @@ class CampaignInputForm extends Component {
       Cost: this.state.cost
     }
 
-    API.newCampaign(campaignData).then(campaign => console.log (campaign))
+    API.newCampaign(campaignData).then((campaign) => {
+      console.log (campaign)
+      if (campaign.status = 200) {
+        this.props.isPaneOpen()
+      };
+    }).catch(error => alert(error, "Campaign"));
   }
 
   render() {
@@ -37,34 +45,35 @@ class CampaignInputForm extends Component {
         <form>
           <label>
             Influencer:
-            <input type="text" name="account-name" />
+            <input onChange = {this.onChange.bind(this)} type="text" name="account-name" />
           </label>
           <br />
           <label>
             Date:
-            <input type="date" name="date" />
+            <input onChange = {this.onChange.bind(this)} type="date" name="date" />
           </label>
           <br />
           <label>
             URL:
-            <input type="text" name="URL" />
+            <input onChange = {this.onChange.bind(this)} type="text" name="URL" />
           </label>
           <br />
           <label>
             Client:
-            <input type="text" name="client" />
+            <input onChange = {this.onChange.bind(this)} type="text" name="client" />
           </label>
           <br />
           <label>
             Impressions:
-            <input type="number" name="impressions" />
+            <input onChange = {this.onChange.bind(this)} type="number" name="impressions" />
           </label>
           <br />
           <label>
             Cost:
-            <input type="number" name="cost" />
+            <input onChange = {this.onChange.bind(this)} type="number" name="cost" />
           </label>
           <br />
+          <button type="button" onClick={this.addCampaign}>Add Campaign</button>
         </form>
       </div>
     );

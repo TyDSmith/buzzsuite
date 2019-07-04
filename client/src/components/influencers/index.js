@@ -4,10 +4,7 @@ import InfluencersFilter from './influencers-filter';
 import AddInfluencerButton from './add-influencer-btn';
 import "./influencers.css";
 
-
 class Influencers extends Component {
-
-    
 
     render() {
         return (
@@ -24,9 +21,7 @@ class Influencers extends Component {
             </div>
         )   
     }
-    
 }
-
 
 export default Influencers;
 
