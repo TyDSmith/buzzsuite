@@ -4,7 +4,6 @@ import InfluencersFilter from './influencers-filter';
 import AddInfluencerButton from './add-influencer-btn';
 import "./influencers.css";
 
-import API from "../utility/API"
 
 class Influencers extends Component {
 
