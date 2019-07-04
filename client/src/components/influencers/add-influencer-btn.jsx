@@ -26,7 +26,7 @@ class AddInfluencerButton extends Component {
     return (
       <div ref={ref => (this.el = ref)}>
         <button
-          class="add-influencer-button"
+          class="add-button"
           onClick={() => this.setState({ isPaneOpen: true })}
         >
           Add Influencer

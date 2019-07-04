@@ -14,7 +14,6 @@ class Influencers extends Component {
             <div>
                 <div class="page-heading">
                     <h1 class="page-title">Influencers</h1>
-                    <h1>Welcome Back, {this.props.UserInfo.data.firstName} {this.props.UserInfo.data.lastName} </h1>
                     <AddInfluencerButton UserInfo={this.props.UserInfo}/>
     
                 </div>

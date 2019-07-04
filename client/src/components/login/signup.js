@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link } from "react-router-dom"
 import API from '../utility/API';
-
+import "./signup.css";
 
 
 class Signup extends Component {
@@ -56,10 +56,11 @@ class Signup extends Component {
     render() {
         return (
             <div>
-
+                <div class="login-modal">
+                <form class="login-form"> 
                 <p>{this.state.errorMessage}</p>
 
-                <form > 
+                
                     <input onChange = {this.onChange.bind(this)} type="text" name="firstName" placeholder="First Name"/> 
                     <input onChange = {this.onChange.bind(this)} type="text" name="lastName" placeholder="Lastb Name"/>      
                     <input onChange = {this.onChange.bind(this)} type="text" name="email" placeholder="E-mail"/>
@@ -69,6 +70,7 @@ class Signup extends Component {
                 </form>
                 <Link to="/login"> Login </Link>
             </div>
+        </div>
         )
     }
 }

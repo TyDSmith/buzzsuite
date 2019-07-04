@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import App from "../App";
 import greeting from "../App";
 
+
 class NavBar extends Component {
 
     render() {
@@ -16,7 +17,7 @@ class NavBar extends Component {
         }
         return (
             <div>
-                <Navbar bg="primary" variant="dark">
+                <Navbar bg="#19334d" variant="dark">
                     <Navbar.Brand href="/home">
                         <img src="../images/logos/BuzzSuite.png" alt="logo" height="25" />
                     </Navbar.Brand>
