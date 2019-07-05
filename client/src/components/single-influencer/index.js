@@ -7,8 +7,6 @@ import API from '../utility/API';
 
 function SingleInfluencer(props) {
 
-// function getHistory() {
-//     API.getInfluencers().then((data) => console.log(data))
 
 
 

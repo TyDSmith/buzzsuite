@@ -17,7 +17,6 @@ export default {
     return axios.put("/auth/user/forgotpassword", userData);
   },
 
-<<<<<<< HEAD
   //Data Import
 
   //get all items in database
@@ -35,8 +34,7 @@ deleteBook: function(id) {
 // Saves a book to the database
 saveBook: function(bookData) {
   return axios.post("/api/books", bookData);
-}
-=======
+},
   // Twitter Database
   newCampaign: function(userData) {
     return axios.post("/api/twitter/campaign", userData);
@@ -47,6 +45,5 @@ saveBook: function(bookData) {
   },
 
   
->>>>>>> 16c65f8d32ada2010370b788477d7148c8ac3342
 
 };

@@ -23,7 +23,7 @@ class CampaignsTable extends Component {
       //   .then(res => console.log(res.data)) 
         .then(res => this.setState({ influencer: res.data }, ()=> console.log(this.state)))
         .catch(err => console.log(err));
-      //   console.log(this.state)
+        // console.log(this.state.influencer)
     };
 
   render(){
