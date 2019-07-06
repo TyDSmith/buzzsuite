@@ -2,10 +2,12 @@ import React, { Component } from "react";
 // import InfluencersTable from "./influencers-table";
 
 class InfluencerProfile extends Component {
+  
+  // console.log (props)
   render() {
     return (
       <div class="influencer-profile">
-        <h3>JDoe</h3>
+        <h3>{this.props.UserInfo.data.firstName} {this.props.UserInfo.data.lastName}</h3>
         <h5>Twitter</h5>
         <div class="influencer-profile-stats">
           <p>

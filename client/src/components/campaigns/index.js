@@ -3,6 +3,8 @@ import CampaignsTable from './campaigns-table';
 import AddCampaignButton from './add-campaign-btn';
 // import CampaignsFilter from '../campaigns-filter.jsx';
 
+
+
 function Campaigns(props) {
 
     console.log (props.UserInfo)
