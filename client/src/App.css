@@ -188,3 +188,34 @@ img.social {
   border-radius: 4px;
   flex: 1 1;
 }
+
+/* Modal */
+
+.slide-pane__header {
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+}
+
+.modal-title {
+  float: left;
+}
+
+.exit-modal {
+  border-radius: 5px;
+  border: 0px;
+  float: right;
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+}
