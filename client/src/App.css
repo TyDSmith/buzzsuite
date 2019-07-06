@@ -115,10 +115,17 @@ img.social {
 .ReactTable .rt-noData {
   z-index: 0 !important;
 }
-
-.slide-pane {
-  background: #eee;
-}
+/* 
+.slide-pane__header {
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+} */
 
 /* Forms */
 
@@ -162,4 +169,22 @@ img.social {
   -webkit-font-smoothing: auto;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   font-weight: 500;
+}
+
+.add-button {
+  float: right;
+  height: 100%;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+  border: none;
+  color: white;
+  border-radius: 4px;
+  flex: 1 1;
 }
