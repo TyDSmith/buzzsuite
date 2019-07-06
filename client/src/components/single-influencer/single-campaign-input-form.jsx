@@ -17,6 +17,9 @@ class SingleCampaignInputForm extends Component {
     };
   
     addCampaign = () => {
+      let cpm = parseInt((this.state.cost/(this.state.impressions/1000)) * 100) / 100;
+      let cpc = parseInt((this.state.clicks / this.state.cost) * 100) / 100;
+
 
       let campaignData = {
         bs_account_id: this.props.UserInfo.data._id,
@@ -25,7 +28,12 @@ class SingleCampaignInputForm extends Component {
         client: this.state.client,
         date: this.state.date,
         Impressions: this.state.impressions,
-        Cost: this.state.cost
+        Cost: this.state.cost,
+        linkClicks: this.state.clicks,
+        channel: this.state.channel,
+        service: this.state.product,
+        CPM: cpm,
+        CPC: cpc,
       };
   
       API.newCampaign(campaignData).then((campaign) => {
@@ -66,6 +74,21 @@ class SingleCampaignInputForm extends Component {
           <label>
             Cost:
             <input onChange = {this.onChange.bind(this)} type="number" name="cost" />
+          </label>
+          <br/>
+          <label>
+            Clicks:
+            <input onChange = {this.onChange.bind(this)} type="number" name="clicks" />
+          </label>
+          <br/>
+          <label>
+            Channel:
+            <input onChange = {this.onChange.bind(this)} type="text" name="channel" />
+          </label>
+          <br/>
+          <label>
+            Product:
+            <input onChange = {this.onChange.bind(this)} type="text" name="product" />
           </label>
           <br />
 
