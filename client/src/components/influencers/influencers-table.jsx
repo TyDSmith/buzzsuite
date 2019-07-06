@@ -33,7 +33,7 @@ class Influencers extends Component {
           {
               Header: "Account",
               accessor: "influencerAccount",
-              Cell: e => <a href = {e.value}> {e.value} </a>
+              Cell: e => <Link to = "/Influencer" > {e.value} </Link>
             
           },
 

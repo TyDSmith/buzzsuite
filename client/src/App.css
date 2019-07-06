@@ -119,3 +119,47 @@ img.social {
 .slide-pane {
   background: #eee;
 }
+
+/* Forms */
+
+.add-form label {
+  text-align: left;
+}
+
+.add-form input {
+  padding: 9px 10px;
+  border-radius: 3px;
+  border: 1px solid #cbd6e2;
+  font-size: 16px;
+  transition: all 0.15s ease-out;
+  background-color: #f5f8fa;
+  color: #33475b;
+  display: block;
+  height: 40px;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.add-form input[type="submit"] {
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-font-smoothing: auto;
+  font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}

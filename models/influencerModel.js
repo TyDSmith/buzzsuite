@@ -3,7 +3,11 @@ var Schema = mongoose.Schema;
 
 var influencerSchema = new Schema({
 
-  accountName: {
+  name: {
+    type: String,
+    required: true,
+  },
+  socialAccount: {
     type: String,
     required: true,
     unique: true
