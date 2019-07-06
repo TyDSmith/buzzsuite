@@ -7,10 +7,8 @@ import API from '../utility/API';
 
 function SingleInfluencer(props) {
 
-
-
-
-
+    let socialAccount = props.location.state.socialAccount
+    console.log (socialAccount)
 
     return (
         <div>
@@ -20,7 +18,7 @@ function SingleInfluencer(props) {
                     <InfluencerProfile UserInfo={props.UserInfo}/>
                 </div>
                 <div class="column column-center">
-                    <InfluencerHistory />
+                    <InfluencerHistory socialAccount={socialAccount}/>
                 </div>
                 <div class="column column-right">
                     <SingleCampaignInputForm UserInfo={props.UserInfo}/>

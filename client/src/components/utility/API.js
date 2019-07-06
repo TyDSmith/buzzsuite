@@ -23,6 +23,9 @@ export default {
   getInfluencers: function() {
   return axios.get("/api/twitter");
   },
+  getCampaignByAccount: function(socialAccount) {
+    return axios.get("/api/twitter/" + socialAccount);
+    },
   getCampaignById: function(id) {
     return axios.get("/api/twitter/" + id);
     },

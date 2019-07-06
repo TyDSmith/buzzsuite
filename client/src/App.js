@@ -22,6 +22,10 @@ class App extends React.Component {
     };
   };
 
+  componentDidMount() {
+  
+  };
+
   updateState = (UserInfo) => {
 
     this.setState({ UserInfo: UserInfo })
@@ -89,15 +93,11 @@ class App extends React.Component {
 
           <Route path="/signup" component={Signup} />
           <Route path="/forgotpassword" component={forgotPassword} />
-
+          <Route path="/" component={Home} />
           <Route path="/home" component={Home} />
           
         </div>
-
-
-
       </Router >
-
     );
   }
 }

@@ -22,6 +22,10 @@ router
   .post(twitterController.findById);
 
 router
+  .route("/api/twitter/:account")
+  .get(twitterController.findByInfluencer);
+
+router
   .route("/influencer")
   .post(twitterController.createInfluencer);
 
