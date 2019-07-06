@@ -41,7 +41,7 @@ class CampaignInputForm extends Component {
     return (
       <div>
         <h3>Add a campaign</h3>
-        <form>
+        <form class="add-form">
           <label>
             Influencer:
             <input onChange = {this.onChange.bind(this)} type="text" name="account-name" />
@@ -72,7 +72,9 @@ class CampaignInputForm extends Component {
             <input onChange = {this.onChange.bind(this)} type="number" name="cost" />
           </label>
           <br />
+
           <button type="button" onClick={this.addCampaign}>Add Campaign</button>
+
         </form>
       </div>
     );

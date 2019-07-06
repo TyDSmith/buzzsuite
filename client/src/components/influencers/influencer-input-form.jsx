@@ -34,7 +34,7 @@ class InfluencerInputForm extends Component {
     return (
       <div>
         <h3>Add an Influencer</h3>
-        <form>
+        <form class="add-form">
           <label>
             Name:
             <input onChange = {this.onChange.bind(this)} type="text" name="accountName" />
@@ -50,6 +50,7 @@ class InfluencerInputForm extends Component {
             <input onChange = {this.onChange.bind(this)} type="text" name="product" />
           </label>
           <br />
+
           <button type="button" onClick={this.addInfluencer}>Add Influencer</button>
         </form>
       </div>

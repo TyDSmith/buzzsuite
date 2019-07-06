@@ -37,7 +37,7 @@ class SingleCampaignInputForm extends Component {
     return (
       <div>
         <h3>Add a campaign</h3>
-        <form>
+        <form class="add-form">
           <label>
             Date:
             <input onChange = {this.onChange.bind(this)} type="date" name="date" />
@@ -65,6 +65,7 @@ class SingleCampaignInputForm extends Component {
           <br />
 
           <button type="button" onClick={this.addCampaign}>Add Campaign</button>
+
         </form>
       </div>
     );
