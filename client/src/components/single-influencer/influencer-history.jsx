@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import InfluencersTable from "./influencers-table";
 import API from '../utility/API';
 
 class InfluencerHistory extends Component {
