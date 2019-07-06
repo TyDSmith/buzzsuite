@@ -76,11 +76,6 @@ class SingleCampaignInputForm extends Component {
           </label>
           <br/>
           <label>
-            Clicks:
-            <input onChange = {this.onChange.bind(this)} type="number" name="clicks" />
-          </label>
-          <br/>
-          <label>
             Channel:
             <input onChange = {this.onChange.bind(this)} type="text" name="channel" />
           </label>
