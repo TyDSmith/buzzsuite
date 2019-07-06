@@ -24,7 +24,7 @@ function SingleInfluencer(props) {
                     <InfluencerHistory />
                 </div>
                 <div class="column column-right">
-                    <SingleCampaignInputForm />
+                    <SingleCampaignInputForm UserInfo={props.UserInfo}/>
                 </div>
             </div>
 

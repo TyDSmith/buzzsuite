@@ -17,6 +17,7 @@ class SingleCampaignInputForm extends Component {
     };
   
     addCampaign = () => {
+
       let campaignData = {
         bs_account_id: this.props.UserInfo.data._id,
         urlLink: this.state.URL,
@@ -25,12 +26,11 @@ class SingleCampaignInputForm extends Component {
         date: this.state.date,
         Impressions: this.state.impressions,
         Cost: this.state.cost
-      }
-      console.log (this.props)
-      console.log (this.state)
-      console.log (campaignData)
+      };
   
-      API.newCampaign(campaignData).then(campaign => console.log (campaign))
+      API.newCampaign(campaignData).then((campaign) => {
+        console.log (campaign)
+      }).catch(error => alert(error, "Campaign"));
     }
 
   render() {
