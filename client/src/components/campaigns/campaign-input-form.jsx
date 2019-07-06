@@ -36,13 +36,12 @@ class CampaignInputForm extends Component {
     }
 
     API.newCampaign(campaignData).then((campaign) => {
-      console.log (campaign)
       if (campaign.status = 200) {
         this.props.isPaneOpen()
       };
     }).catch(error => alert(error, "Campaign"));
 
-    
+
   }
 
   render() {

@@ -21,7 +21,7 @@ class CampaignsTable extends Component {
     loadInfluencers = () => {
       API.getInfluencers()
       //   .then(res => console.log(res.data)) 
-        .then(res => this.setState({ influencer: res.data }, ()=> console.log(this.state)))
+        .then(res => this.setState({ influencer: res.data }))
         .catch(err => console.log(err));
         // console.log(this.state.influencer)
     };
