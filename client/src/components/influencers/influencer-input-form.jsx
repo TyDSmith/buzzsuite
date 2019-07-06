@@ -21,6 +21,7 @@ class InfluencerInputForm extends Component {
             <input type="text" name="product" />
           </label>
           <br />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );

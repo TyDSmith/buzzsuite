@@ -36,6 +36,7 @@ class CampaignInputForm extends Component {
             <input type="number" name="cost" />
           </label>
           <br />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );
