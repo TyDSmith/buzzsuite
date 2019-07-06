@@ -27,6 +27,11 @@ class SingleCampaignInputForm extends Component {
           </label>
           <br />
           <label>
+            Clicks:
+            <input type="number" name="clicks" />
+          </label>
+          <br />
+          <label>
             Cost:
             <input type="number" name="cost" />
           </label>
