@@ -19,8 +19,6 @@ app.get("/*", (req, res) => {
   res.redirect("/")
 })
 
-
-
 // Connect to the Mongo DB
 
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_DB_BUZZSUITE, { useNewUrlParser: true });
