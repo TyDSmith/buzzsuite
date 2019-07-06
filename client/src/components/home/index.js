@@ -7,42 +7,10 @@ import "./home.css";
 function Home(props) {
   return (
     <div>
-      <div class="page-heading">
-        <h1 class="page-title">
-          Buzzsuite
-          <img
-            class="social"
-            // className="d-block w-100"
-            src="../images/logos/facebook.png"
-            height="25"
-            alt=""
-          />
-          <img
-            class="social"
-            // className="d-block w-100"
-            src="../images/logos/instagram.png"
-            height="25"
-            alt=""
-          />
-          <img
-            class="social"
-            // className="d-block w-100"
-            src="../images/logos/twitter.png"
-            height="25"
-            alt=""
-          />
-          <img
-            class="social"
-            // className="d-block w-100"
-            src="../images/logos/icon.png"
-            height="25"
-            alt=""
-          />
-        </h1>
-      </div>
-      <div class="bodyCopy">
-        <InfluencerCarousel />
-      </div>
+      {/* <div class="page-heading">
+
+      </div> */}
+      <InfluencerCarousel />
     </div>
   );
 }
