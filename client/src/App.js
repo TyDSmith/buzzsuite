@@ -6,7 +6,12 @@ import Influencers from "./components/influencers";
 import Login from "./components/login";
 import Signup from "./components/login/signup";
 import forgotPassword from "./components/login/forgotPassword";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from "react-router-dom";
 import Campaigns from "./components/campaigns";
 import SingleInfluencer from "./components/single-influencer";
 import Home from "./components/home";
@@ -51,66 +56,67 @@ class App extends React.Component {
             UserLoggedIn={this.state.UserLoggedIn}
             signout={this.signout}
           />
+          <Switch>
+            <Route
+              path="/campaigns"
+              render={props =>
+                this.state.UserLoggedIn ? (
+                  <Campaigns {...props} UserInfo={this.state.UserInfo} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
 
-          <Route
-            path="/campaigns"
-            render={props =>
-              this.state.UserLoggedIn ? (
-                <Campaigns {...props} UserInfo={this.state.UserInfo} />
-              ) : (
-                <Redirect to="/login" />
-              )
-            }
-          />
+            <Route
+              path="/dashboard"
+              render={props =>
+                this.state.UserLoggedIn ? (
+                  <Dashboard {...props} UserInfo={this.state.UserInfo} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
 
-          <Route
-            path="/dashboard"
-            render={props =>
-              this.state.UserLoggedIn ? (
-                <Dashboard {...props} UserInfo={this.state.UserInfo} />
-              ) : (
-                <Redirect to="/login" />
-              )
-            }
-          />
+            <Route
+              path="/influencers"
+              render={props =>
+                this.state.UserLoggedIn ? (
+                  <Influencers {...props} UserInfo={this.state.UserInfo} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
 
-          <Route
-            path="/influencers"
-            render={props =>
-              this.state.UserLoggedIn ? (
-                <Influencers {...props} UserInfo={this.state.UserInfo} />
-              ) : (
-                <Redirect to="/login" />
-              )
-            }
-          />
+            <Route
+              path="/influencer"
+              render={props =>
+                this.state.UserLoggedIn ? (
+                  <SingleInfluencer {...props} UserInfo={this.state.UserInfo} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
 
-          <Route
-            path="/influencer"
-            render={props =>
-              this.state.UserLoggedIn ? (
-                <SingleInfluencer {...props} UserInfo={this.state.UserInfo} />
-              ) : (
-                <Redirect to="/login" />
-              )
-            }
-          />
+            <Route
+              path="/login"
+              render={props =>
+                this.state.UserLoggedIn ? (
+                  <Redirect to="/campaigns" />
+                ) : (
+                  <Login {...props} updateState={this.updateState} />
+                )
+              }
+            />
 
-          <Route
-            path="/login"
-            render={props =>
-              this.state.UserLoggedIn ? (
-                <Redirect to="/campaigns" />
-              ) : (
-                <Login {...props} updateState={this.updateState} />
-              )
-            }
-          />
-
-          <Route path="/signup" component={Signup} />
-          <Route path="/forgotpassword" component={forgotPassword} />
-          <Route path="/" component={Home} />
-          <Route path="/home" component={Home} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/forgotpassword" component={forgotPassword} />
+            <Route path="/" component={Home} />
+            {/* <Route path="/home" component={Home} /> */}
+          </Switch>
         </div>
       </Router>
     );

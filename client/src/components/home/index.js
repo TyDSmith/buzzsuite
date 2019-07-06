@@ -7,9 +7,6 @@ import "./home.css";
 function Home(props) {
   return (
     <div>
-      {/* <div class="page-heading">
-
-      </div> */}
       <InfluencerCarousel />
     </div>
   );

@@ -9,13 +9,11 @@ class InfluencerCarousel extends Component {
       <div>
         <div>
           <div>
-            
-            <header>
+            <header className="header stuff">
               <Link to="/login">
                 <button> Login </button>
               </Link>
             </header>
-
           </div>
 
           <div className="bodyCopy">

@@ -13,10 +13,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Luna";
-  font-size: 60px;
 }
 
-header {
+.stuff {
   box-sizing: border-box;
   min-height: 100vh;
   padding: 30vw 0 5vw;
@@ -26,17 +25,17 @@ header {
   background: none;
 }
 
-header h1 {
+.stuff h1 {
   margin-top: -100px;
   color: #436980;
 }
 
-header,
-header:before {
+.stuff,
+.stuff:before {
   background: 25% 25% / cover;
 }
 
-header::before {
+.stuff::before {
   bottom: 0;
   content: "";
   left: 0;
@@ -52,7 +51,7 @@ header::before {
   min-height: 100vh;
 }
 
-header * {
+.stuff * {
   font-weight: normal;
   letter-spacing: 0.2em;
   text-align: center;
@@ -106,3 +105,19 @@ h1 {
   color: white;
   font-weight: bold;
 }
+
+/* .home {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url("../../mockupbuzzsuite.jpg");
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+} */
