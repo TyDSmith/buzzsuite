@@ -43,7 +43,4 @@ saveBook: function(bookData) {
   newInfluencer: function(userData) {
     return axios.post("/api/twitter/influencer", userData);
   },
-
-  
-
 };
