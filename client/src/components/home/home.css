@@ -84,8 +84,7 @@ button {
   border: none;
   border-radius: 5px;
   width: 200px;
-  font-size: 25px;
-  position: relative;
+  /* font-size: 25px; */
   bottom: 100px;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
 }

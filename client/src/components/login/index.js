@@ -26,7 +26,9 @@ class Login extends Component {
   };
 
   render() {
-    document.getElementsByClassName("header")[0].classList.remove("stuff");
+    if (document.getElementsByClassName("header").length) {
+      document.getElementsByClassName("header")[0].classList.remove("stuff");
+    }
 
     return (
       <div>
