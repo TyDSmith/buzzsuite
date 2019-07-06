@@ -2,7 +2,7 @@ html {
   height: 100%;
   overflow: hidden;
 }
-
+/* 
 body {
   color: black;
   margin: 0;
@@ -13,7 +13,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Luna";
-}
+} */
 
 header {
   box-sizing: border-box;
