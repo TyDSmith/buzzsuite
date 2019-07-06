@@ -6,7 +6,7 @@ import Influencers from "./components/influencers";
 import Login from "./components/login";
 import Signup from "./components/login/signup";
 import forgotPassword from "./components/login/forgotPassword";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Campaigns from "./components/campaigns";
 import SingleInfluencer from "./components/single-influencer";
 import Home from "./components/home";
@@ -51,7 +51,8 @@ class App extends React.Component {
             UserLoggedIn={this.state.UserLoggedIn}
             signout={this.signout}
           />
-
+        
+        <Switch>
           <Route
             path="/campaigns"
             render={props =>
@@ -91,7 +92,7 @@ class App extends React.Component {
               this.state.UserLoggedIn ? (
                 <SingleInfluencer {...props} UserInfo={this.state.UserInfo} />
               ) : (
-                <Redirect to="/login" />
+      <Redirect to="/login" />
               )
             }
           />
@@ -103,15 +104,16 @@ class App extends React.Component {
                 <Redirect to="/campaigns" />
               ) : (
                 <Login {...props} updateState={this.updateState} />
-              )
-            }
+              )}
           />
 
           <Route path="/signup" component={Signup} />
           <Route path="/forgotpassword" component={forgotPassword} />
           <Route path="/" component={Home} />
           <Route path="/home" component={Home} />
+          </Switch>
         </div>
+
       </Router>
     );
   }

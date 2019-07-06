@@ -14,13 +14,13 @@ class AddInfluencerButton extends Component {
   }
 
   componentDidMount() {
-    console.log (this.props)
+    console.log(this.props);
     Modal.setAppElement(this.el);
   }
 
   isPaneOpen = () => {
-    this.setState({isPaneOpen: false})
-  }
+    this.setState({ isPaneOpen: false });
+  };
 
   render() {
     return (
@@ -43,8 +43,10 @@ class AddInfluencerButton extends Component {
             this.setState({ isPaneOpen: false });
           }}
         >
-          
-          <InfluencerInputForm UserInfo={this.props.UserInfo} isPaneOpen={this.isPaneOpen}/>
+          <InfluencerInputForm
+            UserInfo={this.props.UserInfo}
+            isPaneOpen={this.isPaneOpen}
+          />
           <p>
             To add a campaign to an existing influencer please click on the
             influencer in the table
