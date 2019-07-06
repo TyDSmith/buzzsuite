@@ -22,7 +22,10 @@ export default {
   //get all items in database
   getInfluencers: function() {
   return axios.get("/api/twitter");
-},
+  },
+  getCampaignById: function(id) {
+    return axios.get("/api/twitter/" + id);
+    },
 // Gets the book with the given id
 getBook: function(id) {
   return axios.get("/api/books/" + id);
@@ -43,7 +46,4 @@ saveBook: function(bookData) {
   newInfluencer: function(userData) {
     return axios.post("/api/twitter/influencer", userData);
   },
-
-  
-
 };

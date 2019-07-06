@@ -18,7 +18,8 @@ class InfluencerInputForm extends Component {
 
   addInfluencer = () => {
     let influencerData = {
-      accountName: this.state.accountName,
+      name: this.state.name,
+      socialAccount: this.state.accountName,
       channel: this.state.channel,
       product: this.state.product,
     }
@@ -37,6 +38,11 @@ class InfluencerInputForm extends Component {
         <form class="add-form">
           <label>
             Name:
+            <input onChange = {this.onChange.bind(this)} type="text" name="name" />
+          </label>
+          <br />
+          <label>
+            Social Account:
             <input onChange = {this.onChange.bind(this)} type="text" name="accountName" />
           </label>
           <br />

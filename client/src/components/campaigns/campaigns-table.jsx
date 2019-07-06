@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import API from "../../Utils";
+import API from "../utility/API"
 
 class CampaignsTable extends Component {
   constructor(props) {
@@ -12,16 +12,14 @@ class CampaignsTable extends Component {
       };
     }
     
-  
     componentDidMount() {
       this.loadInfluencers();
     }
     
-  
     loadInfluencers = () => {
-      API.getInfluencers()
+      API.getCampaignById(this.props.userID)
       //   .then(res => console.log(res.data)) 
-        .then(res => this.setState({ influencer: res.data }, ()=> console.log(this.state)))
+        .then(res => this.setState({ influencer: res.data }))
         .catch(err => console.log(err));
         // console.log(this.state.influencer)
     };

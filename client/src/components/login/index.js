@@ -25,7 +25,9 @@ class Login extends Component {
             password: this.state.password
         }
         API.userSignin(userData)
-        .then((account) => this.props.updateState(account))
+        .then((account) => {
+            this.props.updateState(account)
+        })
     };
 
     render () {
