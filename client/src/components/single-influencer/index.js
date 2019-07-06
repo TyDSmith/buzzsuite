@@ -3,16 +3,22 @@ import InfluencerProfile from './influencer-profile';
 import SingleCampaignInputForm from './single-campaign-input-form';
 import InfluencerHistory from './influencer-history';
 import '../single-influencer/single-influencer.css';
-
+import API from '../utility/API';
 
 function SingleInfluencer(props) {
+
+
+
+
+
+
     return (
         <div>
             <h2>Influencer name goes here</h2>
             <h1>Welcome Back, {props.UserInfo.data.firstName} {props.UserInfo.data.lastName} </h1>
             <div class="single-influencer-div">
                 <div class="column column-left">
-                    <InfluencerProfile />
+                    <InfluencerProfile UserInfo={props.UserInfo}/>
                 </div>
                 <div class="column column-center">
                     <InfluencerHistory />
@@ -24,6 +30,5 @@ function SingleInfluencer(props) {
 
         </div>
     )
-}
-
+};
 export default SingleInfluencer;

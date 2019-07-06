@@ -47,7 +47,7 @@ class App extends React.Component {
       greeting = <p>Welcome back, {this.state.UserInfo.data.email}</p>
     }
 
-    console.log(this.state.UserInfo);
+    // console.log(this.state.UserInfo);
 
     return (
 

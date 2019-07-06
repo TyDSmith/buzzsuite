@@ -2,83 +2,84 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import API from "../../Utils";
+import API from '../utility/API';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
-class InfluencersTable extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     data: makeData()
-  //   };
-  // }
-  state = {
-    influencers: []
-  };
+class Influencers extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        influencer: []
+      };
+    }
+    
+  
+    componentDidMount() {
+      this.loadInfluencers();
+    }
+    
+  
+    loadInfluencers = () => {
+      API.getInfluencers()
+      //   .then(res => console.log(res.data)) 
+        .then(res => this.setState({ influencer: res.data }, ()=> console.log(this.state)))
+        .catch(err => console.log(err));
+      //   console.log(this.state)
+    };
 
-  componentDidMount() {
-    this.loadInfluencers();
-  }
-
-  loadInfluencers = () => {
-    API.getInfluencers()
-      .then(res => this.setState({ influencers: res.data }))
-      .catch(err => console.log(err));
-  };
-
-  render() {
-    const { data } = this.state;
-    return (
-<div>
-        <ReactTable
-          data={data}
-          defaultPageSize={8}
+  render(){
+      const columns = [
           
-          columns={[
-            {
-              Header: "Accounts",
-              columns: [
-                {
-                 Header:"Accounts",
-                 id: "Accounts",
-                 accessor: "hello world"
-                },
-                {
-                  Header: "Channel",
-                  id: "channel",
-                  accessor: "hello world"
-                },
-                {
-                  Header: "Product",
-                  id: "product",
-                  accessor: d => d.product
-                },
-                {
-                  Header: "username",
-                  id: "username",
-                  accessor: d => d.username
-                }
-              ]
-            },
-            {
-              Header: "Metrics",
-              columns: [
-                {
-                  Header: "CPM",
-                  id: "cpm",
-                  accessor: d => d.cpm
-                },
-                {
-                  Header: "CPC",
-                  id: "cpc",
-                  accessor: d => d.cpc
-                }
-              ]
-            }
-          ]}
-        />
-      </div>
-    );
-  }
+          {
+              Header: "Account",
+              accessor: "influencerAccount",
+              Cell: e => <a href = {e.value}> {e.value} </a>
+            
+          },
+
+          {
+              Header: "Channel",
+              accessor: "channel"
+          },
+
+          {
+              Header: "Date",
+              accessor: "date"
+          },
+
+          {
+              Header: "Product",
+              accessor: "service"
+          },
+
+          {
+              Header: "$ CPM",
+              accessor: "CPM"
+          },
+
+          {
+              Header: "CPC",
+              accessor: "CPC"
+          },
+
+      ]
+
+
+  return (
+
+      <ReactTable
+      defaultPageSize={8}
+      columns = {columns}
+      data = {this.state.influencer}
+  >
+
+
+</ReactTable>
+
+       
+
+      )
+  };
 }
 
-export default InfluencersTable;
+export default Influencers;

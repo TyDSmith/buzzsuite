@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InfluencersTable from './influencers-table';
 import InfluencersFilter from './influencers-filter';
 import AddInfluencerButton from './add-influencer-btn';
-import "./influencers.css";
 
 class Influencers extends Component {
 
