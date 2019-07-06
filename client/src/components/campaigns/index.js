@@ -6,8 +6,6 @@ import AddCampaignButton from './add-campaign-btn';
 
 
 function Campaigns(props) {
-
-    console.log (props.UserInfo)
     
     return (
         <div>
@@ -15,7 +13,7 @@ function Campaigns(props) {
                 <h1 class="page-title">Campaigns</h1>
                 <span class="add-btn-span"><AddCampaignButton UserInfo={props.UserInfo}/></span>
             </div>
-            <CampaignsTable />
+            <CampaignsTable userID={props.UserInfo.data._id}/>
         </div>
     )
 }
