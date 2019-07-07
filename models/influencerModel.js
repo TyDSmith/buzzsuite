@@ -22,6 +22,12 @@ var influencerSchema = new Schema({
   },
   accountURL: {
     type: String,
+  },
+  avgCPM: {
+    type:Number
+  }, 
+  avgCPC: {
+    type: Number
   }
 });
 

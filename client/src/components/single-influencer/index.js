@@ -3,7 +3,7 @@ import InfluencerProfile from './influencer-profile';
 import SingleCampaignInputForm from './single-campaign-input-form';
 import InfluencerHistory from './influencer-history';
 import '../single-influencer/single-influencer.css';
-import API from '../utility/API';
+// import API from '../utility/API';
 
 function SingleInfluencer(props) {
 

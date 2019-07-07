@@ -18,7 +18,10 @@ class InfluencerHistory extends Component {
   loadInfluencers = () => {
     API.getCampaignByAccount(this.props.socialAccount)
     //   .then(res => console.log(res.data)) 
-      .then(res => this.setState({ influencer: res.data }))
+      .then((res) => {
+        this.setState({ influencers: res.data })
+        console.log (res)
+    })
       .catch(err => console.log(err));
       };   
 
@@ -33,7 +36,7 @@ class InfluencerHistory extends Component {
               Date: {influencer.date}
             </p>
             <p>
-            URL: {influencer.URL}
+            URL: {influencer.urlLink}
             </p>
             <p>
               Impressions: {influencer.impression}
