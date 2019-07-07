@@ -13,7 +13,6 @@ class Influencers extends Component {
       };
     }
     
-  
     componentDidMount() {
       this.loadInfluencers();
     }
@@ -22,7 +21,10 @@ class Influencers extends Component {
     loadInfluencers = () => {
       API.getInfluencers()
       //   .then(res => console.log(res.data)) 
-        .then(res => this.setState({ influencer: res.data }))
+        .then((res) => {
+          console.log (res.data)
+          this.setState({ influencer: res.data })
+        })
         .catch(err => console.log(err));
       //   console.log(this.state)
     };
@@ -32,8 +34,11 @@ class Influencers extends Component {
           
           {
               Header: "Account",
-              accessor: "influencerAccount",
-              Cell: e => <Link to = "/Influencer" > {e.value} </Link>
+              accessor: "socialAccount",
+              Cell: e => <Link to = {{
+                pathname:"/Influencer",
+                state:{socialAccount: e.value}
+              }} > {e.value} </Link>
             
           },
 
@@ -49,17 +54,17 @@ class Influencers extends Component {
 
           {
               Header: "Product",
-              accessor: "service"
+              accessor: "channel"
           },
 
           {
               Header: "$ CPM",
-              accessor: "CPM"
+              accessor: "avgCPM"
           },
 
           {
               Header: "CPC",
-              accessor: "CPC"
+              accessor: "avgCPC"
           },
 
       ]
@@ -73,11 +78,7 @@ class Influencers extends Component {
       data = {this.state.influencer}
   >
 
-
 </ReactTable>
-
-       
-
       )
   };
 }

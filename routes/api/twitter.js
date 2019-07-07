@@ -6,23 +6,21 @@ router.route("/")
   .get(twitterController.findAll)
   .post(twitterController.create);
 
-// Matches with "/api/twitter/:id"
-router
-  .route("/:id")
-  .get(twitterController.findById)
-  .put(twitterController.update)
-  .delete(twitterController.remove);
-
 router
   .route("/campaign")
   .post(twitterController.create);
 
 router
   .route("/campaign/:id")
-  .post(twitterController.findById);
+  .get(twitterController.findById);
+
+router
+  .route("/influencer/:account")
+  .get(twitterController.findByInfluencer);
 
 router
   .route("/influencer")
+  .get(twitterController.findAllInfluencer)
   .post(twitterController.createInfluencer);
 
   router

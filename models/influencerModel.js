@@ -22,7 +22,17 @@ var influencerSchema = new Schema({
   },
   accountURL: {
     type: String,
-  }
+  },
+  avgCPM: {
+    type:Number
+  }, 
+  avgCPC: {
+    type: Number
+  }, 
+  date: {
+    type:Date,
+    default: Date.now
+  },
 });
 
 var influencerModel = mongoose.model("influencerCollections", influencerSchema);

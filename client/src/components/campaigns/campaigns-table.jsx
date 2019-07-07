@@ -19,12 +19,16 @@ class CampaignsTable extends Component {
     loadInfluencers = () => {
       API.getCampaignById(this.props.userID)
       //   .then(res => console.log(res.data)) 
-        .then(res => this.setState({ influencer: res.data }))
+        .then((res) => {
+          console.log (res.data)
+          this.setState({ influencer: res.data })
+        })
         .catch(err => console.log(err));
         // console.log(this.state.influencer)
     };
 
   render(){
+    
       const columns = [
           {
               Header: "Account",
@@ -61,10 +65,10 @@ class CampaignsTable extends Component {
 
   return (
 
-      <ReactTable
-      defaultPageSize={8}
-      columns = {columns}
-      data = {this.state.influencer}
+  <ReactTable
+    defaultPageSize={8}
+    columns = {columns}
+    data = {this.state.influencer}
   >
 
 

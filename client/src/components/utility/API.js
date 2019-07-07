@@ -21,10 +21,15 @@ export default {
 
   //get all items in database
   getInfluencers: function() {
-  return axios.get("/api/twitter");
+  console.log("API ")
+  return axios.get("/api/twitter/influencer");
   },
+  getCampaignByAccount: function(socialAccount) {
+    console.log (socialAccount)
+    return axios.get("/api/twitter/influencer/" + socialAccount);
+    },
   getCampaignById: function(id) {
-    return axios.get("/api/twitter/" + id);
+    return axios.get("/api/twitter/campaign/" + id);
     },
 // Gets the book with the given id
 getBook: function(id) {

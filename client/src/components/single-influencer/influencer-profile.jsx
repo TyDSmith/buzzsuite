@@ -3,21 +3,22 @@ import React, { Component } from "react";
 
 class InfluencerProfile extends Component {
   
-  // console.log (props)
+  
   render() {
+    console.log (this.props)
     return (
       <div class="influencer-profile">
-        <h3>{this.props.UserInfo.data.firstName} {this.props.UserInfo.data.lastName}</h3>
+        <h3>{this.props.InfluencerProfileInfo.name}</h3>
         <h5>Twitter</h5>
         <div class="influencer-profile-stats">
           <p>
-            Average CPM: <span>$7.26</span>
+            Average CPM: <span>{this.props.InfluencerProfileInfo.avgCPM}</span>
           </p>
           <p>
-            Average CPC: <span>$0.75</span>
+            Average CPC: <span>{this.props.InfluencerProfileInfo.avgCPC}</span>
           </p>
           <p>
-            Campaigns: <span>4</span>
+            Campaigns: <span>{this.props.InfluencerProfileInfo.numberOfCampaigns}</span>
           </p>
         </div>
       </div>

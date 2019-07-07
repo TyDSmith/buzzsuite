@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the.twitterModelsController
 module.exports = {
   findAll: function(req, res) {
+    console.log ("find all")
     db.twitterModel
       .find(req.query)
       .sort({ date: -1 })
@@ -43,6 +44,14 @@ module.exports = {
   createInfluencer: function(req, res) {
     db.influencerModel
       .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findAllInfluencer: function(req, res) {
+    console.log ("triggered")
+    db.influencerModel
+      .find(req.query)
+      .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
