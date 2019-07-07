@@ -28,7 +28,11 @@ var influencerSchema = new Schema({
   }, 
   avgCPC: {
     type: Number
-  }
+  }, 
+  date: {
+    type:Date,
+    default: Date.now
+  },
 });
 
 var influencerModel = mongoose.model("influencerCollections", influencerSchema);
