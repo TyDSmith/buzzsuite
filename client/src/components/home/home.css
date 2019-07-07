@@ -1,7 +1,8 @@
-html {
+/* html {
   height: 100%;
   overflow: hidden;
 }
+
 
 body {
   color: black;
@@ -13,8 +14,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Luna";
-  font-size: 60px;
-}
+} 
+
 
 header {
   box-sizing: border-box;
@@ -94,14 +95,14 @@ img.social {
   size: 50px;
   margin-left: 80px;
 }
-/* 
+
 img.d-block w-100 {
   margin: 25px 0px;
-} */
+} 
 
 h1 {
   font-weight: 1300;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   color: white;
   font-weight: bold;
-}
+} */
