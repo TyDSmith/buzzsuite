@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import InfluencersTable from "./influencers-table";
+
 
 class InfluencerProfile extends Component {
   

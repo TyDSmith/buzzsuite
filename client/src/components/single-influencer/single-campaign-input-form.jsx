@@ -37,7 +37,6 @@ class SingleCampaignInputForm extends Component {
       };
   
       API.newCampaign(campaignData).then((campaign) => {
-        console.log (campaign)
       }).catch(error => alert(error, "Campaign"));
     }
 
@@ -74,11 +73,6 @@ class SingleCampaignInputForm extends Component {
           <label>
             Cost:
             <input onChange = {this.onChange.bind(this)} type="number" name="cost" />
-          </label>
-          <br/>
-          <label>
-            Clicks:
-            <input onChange = {this.onChange.bind(this)} type="number" name="clicks" />
           </label>
           <br/>
           <label>

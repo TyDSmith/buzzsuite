@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import InfluencersTable from "./influencers-table";
-import API from "../../Utils";
+import API from '../utility/API';
 
 class InfluencerHistory extends Component {
 
@@ -19,7 +18,7 @@ class InfluencerHistory extends Component {
   loadInfluencers = () => {
     API.getCampaignByAccount(this.props.socialAccount)
     //   .then(res => console.log(res.data)) 
-      .then(res => this.setState({ influencers: res.data }, ()=> console.log(this.state)))
+      .then(res => this.setState({ influencer: res.data }))
       .catch(err => console.log(err));
       };   
 

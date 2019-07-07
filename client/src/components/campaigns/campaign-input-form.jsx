@@ -36,13 +36,12 @@ class CampaignInputForm extends Component {
     }
 
     API.newCampaign(campaignData).then((campaign) => {
-      console.log (campaign)
       if (campaign.status = 200) {
         this.props.isPaneOpen()
       };
     }).catch(error => alert(error, "Campaign"));
 
-    
+
   }
 
   render() {
@@ -83,11 +82,6 @@ class CampaignInputForm extends Component {
           <label>
             Cost:
             <input onChange = {this.onChange.bind(this)} type="number" name="cost" />
-          </label>
-          <br/>
-          <label>
-            Clicks:
-            <input onChange = {this.onChange.bind(this)} type="number" name="clicks" />
           </label>
           <br/>
           <label>
