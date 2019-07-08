@@ -41,7 +41,7 @@ class SingleCampaignInputForm extends Component {
       API.newCampaign(campaignData).then((campaign) => {console.log(campaign)
       }).catch(error => alert(error, "Campaign"));
 
-      this.props.triggerReload()
+      this.props.reloadHistory()
     }
 
   render() {
