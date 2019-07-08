@@ -85,7 +85,7 @@ class SingleInfluencer extends Component {
                         <InfluencerProfile socialAccount={socialAccount} InfluencerProfileInfo={this.state.InfluencerProfileInfo} />
                     </div>
                     <div class="column column-center">
-                        <InfluencerHistory socialAccount={socialAccount} influencers={this.state.influencers} />
+                        <InfluencerHistory socialAccount={socialAccount} influencers={this.state.influencers} reloadHistory={this.reloadHistory}/>
                     </div>
                     <div class="column column-right">
                         <SingleCampaignInputForm socialAccount={socialAccount} UserInfo={this.props.UserInfo} reloadHistory={this.reloadHistory}/>
