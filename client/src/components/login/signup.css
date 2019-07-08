@@ -32,3 +32,7 @@
 .login-signup-modal-message {
   font-size: 2em;
 }
+
+.signup-form-button {
+  line-height: 2em;
+}
