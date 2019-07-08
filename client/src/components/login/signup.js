@@ -52,46 +52,53 @@ class Signup extends Component {
   render() {
     return (
       <div>
-        <div class="login-modal">
-          <form class="login-form">
-            <p>{this.state.errorMessage}</p>
-
+        <div className="login-modal signup-modal">
+          <form className="login-form signup-form">
+            <span className="login-signup-modal-message">
+              <h3>{this.state.errorMessage}</h3>
+            </span>
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="firstName"
+              class="signup-form-input"
               placeholder="First Name"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="lastName"
-              placeholder="Lastb Name"
+              class="signup-form-input"
+              placeholder="Last Name"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="email"
+              class="signup-form-input"
               placeholder="E-mail"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="password"
               name="password"
+              class="signup-form-input"
               placeholder="Password"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="password"
               name="confirmPassword"
-              placeholder="ConfirmPassword"
+              class="signup-form-input"
+              placeholder="Confirm Password"
             />
             <button onClick={this.CheckPassword.bind(this)} type="button">
               {" "}
               Sign up
             </button>
+
           </form>
-          <Link to="/login"> Login </Link>
+          <Link to="/login"> Already registered?</Link>
         </div>
       </div>
     );

@@ -10,15 +10,16 @@ class Influencers extends Component {
             <div>
                 <div class="page-heading">
                     <h1 class="page-title">Influencers</h1>
-                    <AddInfluencerButton UserInfo={this.props.UserInfo}/>
-    
+                    <span class="add-btn-span">
+                        <AddInfluencerButton UserInfo={this.props.UserInfo} />
+                    </span>
                 </div>
                 <div id="influencersfilterdiv">
-                    <InfluencersFilter />
+                    {/* <InfluencersFilter /> */}
                 </div>
                 <InfluencersTable />
             </div>
-        )   
+        )
     }
 }
 

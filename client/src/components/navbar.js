@@ -24,8 +24,6 @@ class NavBar extends Component {
                     <Nav className="mr-auto">
                         <Link to="/campaigns" className="navlinks"> Campaigns </Link>
                         <Link to="/Influencers" className="navlinks"> Influencers </Link>
-                        <Link to="/dashboard" className="navlinks" > Dashboard </Link>
-                        <Link to="/Influencer" className="navlinks"> Influencer-single </Link>
                     </Nav>
                     <Form inline>
 
