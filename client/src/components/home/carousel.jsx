@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class InfluencerCarousel extends Component {
   render() {
     return (
-      <div>
+      <div className="carousel-div">
         <div>
           <div>
             <header className="header stuff">
