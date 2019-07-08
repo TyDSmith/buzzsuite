@@ -41,15 +41,15 @@ class Login extends Component {
 
     return (
       <div className="page-start">
-        <div class="login-modal">
+        <div className="login-modal">
           <img src="../images/logos/BuzzSuite.png" alt="logo" width="40%;" />
-          <form class="login-form">
+          <form className="login-form">
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="email"
               placeholder="Username"
-              class="login-form-input"
+              className="login-form-input"
             />
             <br />
             <input
@@ -57,22 +57,22 @@ class Login extends Component {
               type="password"
               name="password"
               placeholder="Password"
-              class="login-form-input"
+              className="login-form-input"
             />
             <br />
             <button
               onClick={this.signin.bind(this)}
               type="button"
-              class="login-form-button"
+              className="login-form-button"
             >
               Submit
             </button>
           </form>
           <Link to="/signup">
             {" "}
-            <button class="signIn">Sign up</button>{" "}
+            <button className="signIn">Sign up</button>{" "}
           </Link>
-          <div class="forgot-password">
+          <div className="forgot-password">
             <Link to="/forgotpassword"> Forgot your password? </Link>
           </div>
         </div>

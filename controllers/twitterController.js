@@ -55,7 +55,7 @@ module.exports = {
   },
   updateAverage: function(req, res) {
     db.influencerModel
-      .findOneAndUpdate({ socialAccount: req.params.account }, {avgCPM:req.body.avgCPM, avgCPC: req.body.avgCPC})
+      .findOneAndUpdate({ socialAccount: req.params.account }, {avgCPM:req.body.avgCPM, avgCPC: req.body.avgCPC, avgCPE: req.body.avgCPE})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

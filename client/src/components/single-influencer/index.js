@@ -16,13 +16,13 @@ class SingleInfluencer extends Component {
 
     updateState = InfluencerProfileInfo => {
         this.setState({ InfluencerProfileInfo });
-
     };
+    
 
 
     render() {
         let socialAccount = this.props.location.state.socialAccount
-        console.log(socialAccount)
+        
         return (
             <div className="page-start">
                 <h2>{this.props.UserInfo.name}</h2>

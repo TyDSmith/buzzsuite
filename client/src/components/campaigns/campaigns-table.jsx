@@ -43,13 +43,22 @@ class CampaignsTable extends Component {
 
           {
               Header: "$ CPM",
-              accessor: "CPM"
+              accessor: "CPM",
+              Cell: e => `$ ${e.value}`
           },
 
           {
-              Header: "CPC",
-              accessor: "CPC"
+              Header: "$ CPC",
+              accessor: "CPC",
+              Cell: e => `$ ${e.value}`
           },
+
+          {
+            Header: "$ CPE",
+            accessor: "CPE",
+            Cell: e => `$ ${e.value}`
+        },
+          
           {
             Header: "Remove Campaign",
             accessor: "X",

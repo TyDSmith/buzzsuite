@@ -61,35 +61,35 @@ class Signup extends Component {
               onChange={this.onChange.bind(this)}
               type="text"
               name="firstName"
-              class="signup-form-input"
+              className="signup-form-input"
               placeholder="First Name"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="lastName"
-              class="signup-form-input"
+              className="signup-form-input"
               placeholder="Last Name"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="text"
               name="email"
-              class="signup-form-input"
+              className="signup-form-input"
               placeholder="E-mail"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="password"
               name="password"
-              class="signup-form-input"
+              className="signup-form-input"
               placeholder="Password"
             />
             <input
               onChange={this.onChange.bind(this)}
               type="password"
               name="confirmPassword"
-              class="signup-form-input"
+              className="signup-form-input"
               placeholder="Confirm Password"
             />
             <button onClick={this.CheckPassword.bind(this)} type="button">

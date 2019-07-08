@@ -37,13 +37,20 @@ class Influencers extends Component {
 
           {
               Header: "$ CPM",
-              accessor: "avgCPM"
+              accessor: "avgCPM",
+              Cell: e => `$ ${e.value}`
           },
 
           {
               Header: "CPC",
-              accessor: "avgCPC"
+              accessor: "avgCPC",
+              Cell: e => `$ ${e.value}`
           },
+          {
+            Header: "$ CPE",
+            accessor: "avgCPE",
+            Cell: e => `$ ${e.value}`
+        },
 
       ]
 

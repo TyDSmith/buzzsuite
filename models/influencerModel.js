@@ -26,9 +26,12 @@ var influencerSchema = new Schema({
   avgCPM: {
     type:Number,
     default:0
-
   }, 
   avgCPC: {
+    type: Number,
+    default:0
+  }, 
+  avgCPE: {
     type: Number,
     default:0
   }, 
