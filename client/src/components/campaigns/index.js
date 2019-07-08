@@ -1,21 +1,44 @@
-import React from 'react';
+import React, { Component }from 'react';
 import CampaignsTable from './campaigns-table';
 import AddCampaignButton from './add-campaign-btn';
-// import CampaignsFilter from '../campaigns-filter.jsx';
+import API from "../utility/API"
 
 
 
-function Campaigns(props) {
-    
-    return (
-        <div>
-            <div class="page-heading">
-                <h1 class="page-title">Campaigns</h1>
-                <span class="add-btn-span"><AddCampaignButton UserInfo={props.UserInfo}/></span>
+class Campaigns extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          campaigns: []
+        };
+      }
+      
+      componentDidMount() {
+        this.loadCampaign();
+      }
+      
+      loadCampaign = () => {
+        API.getCampaignById(this.props.UserInfo.data._id)
+          .then((res) => {
+            this.setState({ campaigns: res.data })
+            console.log (this.state.campaigns)
+          })
+          .catch(err => console.log(err));
+          
+      };
+
+    render() {
+        return (
+            <div>
+                <div class="page-heading">
+                    <h1 class="page-title">Campaigns</h1>
+                    <span class="add-btn-span"><AddCampaignButton UserInfo={this.props.UserInfo} loadCampaign={this.loadCampaign}/></span>
+                </div>
+                <CampaignsTable campaigns={this.state.campaigns}/>
             </div>
-            <CampaignsTable userID={props.UserInfo.data._id}/>
-        </div>
-    )
+        )
+    }
+    
 }
 
 export default Campaigns;

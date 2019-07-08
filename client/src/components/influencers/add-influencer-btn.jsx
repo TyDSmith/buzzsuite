@@ -20,6 +20,7 @@ class AddInfluencerButton extends Component {
 
   isPaneOpen = () => {
     this.setState({ isPaneOpen: false });
+    this.props.loadInfluencers()
   };
 
   render() {
