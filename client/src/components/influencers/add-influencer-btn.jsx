@@ -14,12 +14,12 @@ class AddInfluencerButton extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     Modal.setAppElement(this.el);
   }
 
   isPaneOpen = () => {
     this.setState({ isPaneOpen: false });
+    this.props.loadInfluencers()
   };
 
   render() {

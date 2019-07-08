@@ -19,6 +19,7 @@ class AddCampaignButton extends Component {
 
   isPaneOpen = () => {
     this.setState({isPaneOpen: false})
+    this.props.loadCampaign();
   }
 
   render() {

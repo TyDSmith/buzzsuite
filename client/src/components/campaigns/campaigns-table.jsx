@@ -2,32 +2,12 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import API from "../utility/API"
+// import API from "../utility/API"
 
 class CampaignsTable extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-        influencer: []
-      };
-    }
-    
-    componentDidMount() {
-      this.loadInfluencers();
-    }
-    
-    loadInfluencers = () => {
-      API.getCampaignById(this.props.userID)
-      //   .then(res => console.log(res.data)) 
-        .then((res) => {
-          console.log (res.data)
-          this.setState({ influencer: res.data })
-        })
-        .catch(err => console.log(err));
-        // console.log(this.state.influencer)
-    };
 
   render(){
+      
     
       const columns = [
           {
@@ -68,7 +48,7 @@ class CampaignsTable extends Component {
   <ReactTable
     defaultPageSize={8}
     columns = {columns}
-    data = {this.state.influencer}
+    data = {this.props.campaigns}
   >
 
 

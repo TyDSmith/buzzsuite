@@ -19,8 +19,6 @@ class SingleCampaignInputForm extends Component {
     addCampaign = () => {
       let cpm = parseInt((this.state.cost/(this.state.impressions/1000)) * 100) / 100;
       let cpc = parseInt((this.state.cost / this.state.clicks) * 100) / 100;
-      console.log (cpc, cpm)
-
 
       let campaignData = {
         bs_account_id: this.props.UserInfo.data._id,

@@ -16,7 +16,6 @@ class InfluencerHistory extends Component {
   
   loadInfluencers = () => {
     API.getCampaignByAccount(this.props.socialAccount)
-    //   .then(res => console.log(res.data)) 
       .then((res) => {
         this.setState({ influencers: res.data })
         this.avgCPMnCPC();
@@ -80,10 +79,7 @@ class InfluencerHistory extends Component {
               Link Clicks: {influencer.linkClicks}
             </p>
             <p>
-              Retweets: {influencer.retweet}
-            </p>
-            <p>
-              Likes: {influencer.likes}
+              Engagements: {influencer.retweet}
             </p>
           </div>
           ))}

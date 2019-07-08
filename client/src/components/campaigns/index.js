@@ -1,23 +1,48 @@
-import React from 'react';
+import React, { Component }from 'react';
 import CampaignsTable from './campaigns-table';
 import AddCampaignButton from './add-campaign-btn';
+
 import Footer from "../footer";
-// import CampaignsFilter from '../campaigns-filter.jsx';
+
+import API from "../utility/API"
 
 
 
-function Campaigns(props) {
+class Campaigns extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          campaigns: []
+        };
+      }
+      
+      componentDidMount() {
+        this.loadCampaign();
+      }
+      
+      loadCampaign = () => {
+        API.getCampaignById(this.props.UserInfo.data._id)
+          .then((res) => {
+            this.setState({ campaigns: res.data })
+          
+          })
+          .catch(err => console.log(err));
+          
+      };
 
-    return (
-        <div className="page-start">
-            <div class="page-heading">
-                <h1 class="page-title">Campaigns</h1>
-                <span class="add-btn-span"><AddCampaignButton UserInfo={props.UserInfo} /></span>
+    render() {
+        return (
+            <div>
+                <div class="page-heading">
+                    <h1 class="page-title">Campaigns</h1>
+                    <span class="add-btn-span"><AddCampaignButton UserInfo={this.props.UserInfo} loadCampaign={this.loadCampaign}/></span>
+                </div>
+                <CampaignsTable campaigns={this.state.campaigns}/>
+           <Footer />
             </div>
-            <CampaignsTable userID={props.UserInfo.data._id} />
-            <Footer />
-        </div>
-    )
+        )
+    }
+    
 }
 
 export default Campaigns;

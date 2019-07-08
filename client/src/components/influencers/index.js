@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import InfluencersTable from './influencers-table';
-import InfluencersFilter from './influencers-filter';
+// import InfluencersFilter from './influencers-filter';
 import AddInfluencerButton from './add-influencer-btn';
 import Footer from "../footer";
+import API from '../utility/API';
 
 class Influencers extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          influencers: []
+        };
+      }
+      
+      componentDidMount() {
+        this.loadInfluencers();
+      }
+    
+      loadInfluencers = () => {
+        API.getInfluencers()
+          .then((res) => {
+            this.setState({ influencers: res.data })
+          })
+          .catch(err => console.log(err));
+      };
 
     render() {
         return (
@@ -12,13 +31,13 @@ class Influencers extends Component {
                 <div class="page-heading">
                     <h1 class="page-title">Influencers</h1>
                     <span class="add-btn-span">
-                        <AddInfluencerButton UserInfo={this.props.UserInfo} />
+                        <AddInfluencerButton UserInfo={this.props.UserInfo} loadInfluencers={this.loadInfluencers}/>
                     </span>
                 </div>
                 <div id="influencersfilterdiv">
                     {/* <InfluencersFilter /> */}
                 </div>
-                <InfluencersTable />
+                <InfluencersTable influencers={this.state.influencers} />
                 <Footer />
             </div>
         )
