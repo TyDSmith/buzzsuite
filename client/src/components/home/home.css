@@ -42,7 +42,7 @@
   right: 0;
   top: 0;
   display: block;
-  background-image: url("../../mockupbuzzsuite.jpg");
+  /* background-image: url("../../mockupbuzzsuite.jpg"); */
   background-size: cover;
   transform-origin: center center 0;
   transform: translateZ(-1px) scale(2);
@@ -95,4 +95,69 @@ img.social {
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   color: white;
   font-weight: bold;
+}
+.headboard-image {
+  background-image: url("../../buzzsuite-headboard-img.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 70vh;
+}
+
+.home-headboard {
+  display: flex;
+  padding: 60px 20px;
+}
+
+.home-intro-text {
+  text-align: left;
+}
+.home-main-text {
+  text-align: left;
+  font-size: 2.4em;
+}
+
+.signup-button-home {
+  border-radius: 4px;
+  margin-top: 10px;
+  border: none;
+  width: 90%;
+  height: 40px;
+  color: white;
+  background-image: linear-gradient(
+    to right top,
+    #39b6bb,
+    #13b8cd,
+    #00b9e0,
+    #00b8f1,
+    #39b6ff
+  );
+}
+
+.home-image-column {
+  flex: 4;
+}
+
+.home-text-column {
+  flex: 3;
+  padding: 0px 50px;
+  font-size: 1.2em;
+}
+
+/* media screens */
+
+/* body rows */
+
+.home-row {
+  display: flex;
+  padding: 40px;
+}
+
+/* contact */
+
+.home-contact-div {
+  background: black;
+  color: white;
 }

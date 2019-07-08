@@ -19,6 +19,10 @@
   color: white;
 }
 
+.page-start {
+  margin-top: 20px;
+}
+
 /* Typography */
 
 .page-title {
@@ -32,6 +36,9 @@
 
 /*  Navbar*/
 
+.navbar {
+  margin-bottom: 0px;
+}
 .navbar,
 .navbar-default {
   background-color: #19334d;
@@ -87,8 +94,6 @@
 .nav-link {
   color: rgb(0, 162, 255);
 }
-
-
 
 .navlinks {
   margin-right: 10px;

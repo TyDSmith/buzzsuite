@@ -7,7 +7,7 @@ class Influencers extends Component {
 
     render() {
         return (
-            <div>
+            <div className="page-start">
                 <div class="page-heading">
                     <h1 class="page-title">Influencers</h1>
                     <span class="add-btn-span">
