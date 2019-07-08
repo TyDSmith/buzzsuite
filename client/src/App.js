@@ -110,7 +110,7 @@ class App extends React.Component {
             <Route path="/signup" component={Signup} />
             <Route path="/forgotpassword" component={forgotPassword} />
             <Route path="/" component={Home} />
-            {/* <Route path="/home" component={Home} /> */}
+
           </Switch>
         </div>
       </Router>

@@ -1,8 +1,7 @@
-/* html {
+html {
   height: 100%;
   overflow: hidden;
 }
-
 
 body {
   color: black;
@@ -14,8 +13,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Luna";
-} 
-
+}
 
 .stuff {
   box-sizing: border-box;
@@ -81,24 +79,17 @@ p {
   color: white;
 }
 
-button {
+.signUp {
   background: #436980;
-  border: none;
-  border-radius: 5px;
   width: 200px;
-  /* font-size: 25px; */
-  /* bottom: 100px;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
-} */
+  color: white;
+}
 
 img.social {
   size: 50px;
   margin-left: 80px;
 }
-/* 
-img.d-block w-100 {
-  margin: 25px 0px;
-} */
 
 h1 {
   font-weight: 1300;
@@ -106,19 +97,3 @@ h1 {
   color: white;
   font-weight: bold;
 }
-
-/* .home {
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  background-image: url("../../mockupbuzzsuite.jpg");
-  background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
-  min-height: 100vh;
-} */

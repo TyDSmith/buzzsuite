@@ -25,16 +25,15 @@ class Login extends Component {
     API.userSignin(userData).then(account => this.props.updateState(account));
   };
 
-    signin = () => {
-        let userData = {
-            email: this.state.email,
-            password: this.state.password
-        }
-        API.userSignin(userData)
-        .then((account) => {
-            this.props.updateState(account)
-        })
+  signin = () => {
+    let userData = {
+      email: this.state.email,
+      password: this.state.password
     };
+    API.userSignin(userData).then(account => {
+      this.props.updateState(account);
+    });
+  };
   render() {
     if (document.getElementsByClassName("header").length) {
       document.getElementsByClassName("header")[0].classList.remove("stuff");
@@ -71,7 +70,7 @@ class Login extends Component {
           </form>
           <Link to="/signup">
             {" "}
-            <button>Sign up</button>{" "}
+            <button class="signIn">Sign up</button>{" "}
           </Link>
           <div class="forgot-password">
             <Link to="/forgotpassword"> Forgot your password? </Link>

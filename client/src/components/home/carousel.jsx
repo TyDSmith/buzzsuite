@@ -10,11 +10,10 @@ class InfluencerCarousel extends Component {
         <div>
           <div>
             <header className="header stuff">
-              <Link to="/login">
-                <button> Login </button>
+              <Link to="/signup">
+                <button className="signUp"> Sign up </button>
               </Link>
             </header>
-
           </div>
 
           <div className="bodyCopy">
@@ -35,10 +34,7 @@ class InfluencerCarousel extends Component {
                     src="../images/influencerpics/influencer5.jpg"
                     alt="First slide"
                   />
-                  <Carousel.Caption>
-                    <h3 />
-                    <p />
-                  </Carousel.Caption>
+                  <Carousel.Caption />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
@@ -47,10 +43,7 @@ class InfluencerCarousel extends Component {
                     alt="Third slide"
                   />
 
-                  <Carousel.Caption>
-                    <h3 />
-                    <p />
-                  </Carousel.Caption>
+                  <Carousel.Caption />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
@@ -59,41 +52,10 @@ class InfluencerCarousel extends Component {
                     alt="Third slide"
                   />
 
-                  <Carousel.Caption>
-                    <h3 />
-                    <p />
-                  </Carousel.Caption>
+                  <Carousel.Caption />
                 </Carousel.Item>
               </Carousel>
             </p>
-            {/* <img
-              class="social"
-              // className="d-block w-100"
-              src="../images/logos/facebook.png"
-              height="25"
-              alt=""
-            />
-            <img
-              class="social"
-              // className="d-block w-100"
-              src="../images/logos/instagram.png"
-              height="25"
-              alt=""
-            />
-            <img
-              class="social"
-              // className="d-block w-100"
-              src="../images/logos/twitter.png"
-              height="25"
-              alt=""
-            />
-            <img
-              class="social"
-              // className="d-block w-100"
-              src="../images/logos/icon.png"
-              height="25"
-              alt=""
-            /> */}
           </div>
         </div>
       </div>
