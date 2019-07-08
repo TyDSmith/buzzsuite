@@ -3,7 +3,6 @@ const db = require("../models");
 // Defining methods for the.twitterModelsController
 module.exports = {
   findAll: function(req, res) {
-    console.log ("find all")
     db.twitterModel
       .find(req.query)
       .sort({ date: -1 })
@@ -55,9 +54,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   updateAverage: function(req, res) {
-    console.log ("avg triggered")
-    console.log (req.body)
-    
     db.influencerModel
       .findOneAndUpdate({ socialAccount: req.params.account }, {avgCPM:req.body.avgCPM, avgCPC: req.body.avgCPC})
       .then(dbModel => res.json(dbModel))

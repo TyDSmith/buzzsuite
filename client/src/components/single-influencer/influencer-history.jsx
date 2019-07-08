@@ -16,7 +16,6 @@ class InfluencerHistory extends Component {
   
   loadInfluencers = () => {
     API.getCampaignByAccount(this.props.socialAccount)
-    //   .then(res => console.log(res.data)) 
       .then((res) => {
         this.setState({ influencers: res.data })
         this.avgCPMnCPC();

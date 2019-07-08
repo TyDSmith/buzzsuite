@@ -29,13 +29,12 @@ class CampaignInputForm extends Component {
     this.setState({
       [name]: value
     });
-    console.log (this.state)
   };
 
   addCampaign = () => {
     let cpm = parseInt((this.state.cost/(this.state.impressions/1000)) * 100) / 100;
     let cpc = parseInt((this.state.cost / this.state.clicks) * 100) / 100;
-    console.log (cpc, cpm)
+    
     let campaignData = {
       bs_account_id: this.props.UserInfo.data._id,
       urlLink: this.state.URL,
@@ -55,7 +54,7 @@ class CampaignInputForm extends Component {
       if (campaign.status = 200) {
         this.props.isPaneOpen()
       };
-    }).catch(error => alert(error, "Campaign"));
+    }).catch(error => alert("Please Select an Influencer"));
 
 
   }
@@ -69,6 +68,7 @@ class CampaignInputForm extends Component {
             Influencer:
             {/* <input onChange = {this.onChange.bind(this)} type="text" name="accountName" /> */}
             <select onChange = {this.onChange.bind(this)} name="accountName">
+            <option value="" selected disabled hidden>Choose an influencer</option>
               {this.state.influencers.map((influencer) => (
                 <option value={influencer.socialAccount}>{influencer.socialAccount}</option>
               ))}

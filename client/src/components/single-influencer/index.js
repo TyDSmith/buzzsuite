@@ -22,7 +22,6 @@ class SingleInfluencer extends Component {
 
     render () {
         let socialAccount = this.props.location.state.socialAccount
-        console.log (socialAccount)
         return (
             <div>
                 <h2>{this.props.UserInfo.name}</h2>

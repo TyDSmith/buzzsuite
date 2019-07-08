@@ -7,7 +7,7 @@ import "react-table/react-table.css";
 class CampaignsTable extends Component {
 
   render(){
-      console.log (this.props.campaigns)
+      
     
       const columns = [
           {

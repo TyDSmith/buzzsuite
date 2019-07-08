@@ -31,7 +31,6 @@ class App extends React.Component {
   };
 
   signout = () => {
-    console.log("sign out triggered");
     this.setState({ UserLoggedIn: false });
   };
 
