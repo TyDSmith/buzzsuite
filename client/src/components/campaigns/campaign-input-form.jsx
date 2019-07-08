@@ -3,9 +3,24 @@ import API from "../utility/API"
 
 class CampaignInputForm extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      influencers: []
+    };
+  }
+  
+  componentDidMount() {
+    this.loadInfluencers();
+  }
+  
+
+  loadInfluencers = () => {
+    API.getInfluencers()
+      .then((res) => {
+        this.setState({ influencers: res.data })
+      })
+      .catch(err => console.log(err));
   };
 
   onChange = (event) => {
@@ -52,7 +67,13 @@ class CampaignInputForm extends Component {
         <form class="add-form">
           <label>
             Influencer:
-            <input onChange = {this.onChange.bind(this)} type="text" name="accountName" />
+            {/* <input onChange = {this.onChange.bind(this)} type="text" name="accountName" /> */}
+            <select onChange = {this.onChange.bind(this)} name="accountName">
+              {this.state.influencers.map((influencer) => (
+                <option value={influencer.socialAccount}>{influencer.socialAccount}</option>
+              ))}
+            </select>
+            
           </label>
           <br />
           <label>

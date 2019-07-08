@@ -24,6 +24,17 @@ class InfluencerHistory extends Component {
       .catch(err => console.log(err));
   };   
 
+  updateAverage = (avgCPM, avgCPC) => {
+    let userData = {
+      socialAccount: this.props.socialAccount,
+      avgCPM: avgCPM,
+      avgCPC: avgCPC,
+    };
+
+    API.updateInfluencerAverageCPMCPC(userData).then().catch()
+
+  }
+
   avgCPMnCPC = () => {
     
     let avgCPM = null;
@@ -46,6 +57,7 @@ class InfluencerHistory extends Component {
       numberOfCampaigns: this.state.influencers.length,
     }
     this.props.InfluencerProfileInfo(InfluencerProfileInfo)
+    this.updateAverage(avgCPM, avgCPC)
   }
 
   render() {

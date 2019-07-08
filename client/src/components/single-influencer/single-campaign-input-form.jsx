@@ -18,13 +18,14 @@ class SingleCampaignInputForm extends Component {
   
     addCampaign = () => {
       let cpm = parseInt((this.state.cost/(this.state.impressions/1000)) * 100) / 100;
-      let cpc = parseInt((this.state.clicks / this.state.cost) * 100) / 100;
+      let cpc = parseInt((this.state.cost / this.state.clicks) * 100) / 100;
+      console.log (cpc, cpm)
 
 
       let campaignData = {
         bs_account_id: this.props.UserInfo.data._id,
         urlLink: this.state.URL,
-        influencerAccount: `${this.props.UserInfo.data.firstName} ${this.props.UserInfo.data.lastName}`,
+        influencerAccount: this.props.socialAccount,
         client: this.state.client,
         date: this.state.date,
         Impressions: this.state.impressions,
@@ -36,7 +37,7 @@ class SingleCampaignInputForm extends Component {
         CPC: cpc,
       };
   
-      API.newCampaign(campaignData).then((campaign) => {
+      API.newCampaign(campaignData).then((campaign) => {console.log(campaign)
       }).catch(error => alert(error, "Campaign"));
     }
 
@@ -67,7 +68,7 @@ class SingleCampaignInputForm extends Component {
           <br />
           <label>
             Clicks:
-            <input type="number" name="clicks" />
+            <input onChange = {this.onChange.bind(this)} type="number" name="clicks" />
           </label>
           <br />
           <label>
