@@ -40,7 +40,7 @@ class Login extends Component {
     }
 
     return (
-      <div>
+      <div className="page-start">
         <div class="login-modal">
           <img src="../images/logos/BuzzSuite.png" alt="logo" width="40%;" />
           <form class="login-form">

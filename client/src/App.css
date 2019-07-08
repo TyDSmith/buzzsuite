@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #f2f7f9;
 }
 
 .App-logo {
@@ -19,6 +20,11 @@
   color: white;
 }
 
+.page-start {
+  margin-top: 20px;
+  min-height: 100vh;
+}
+
 /* Typography */
 
 .page-title {
@@ -32,6 +38,9 @@
 
 /*  Navbar*/
 
+.navbar {
+  margin-bottom: 0px;
+}
 .navbar,
 .navbar-default {
   background-color: #19334d;
@@ -87,8 +96,6 @@
 .nav-link {
   color: rgb(0, 162, 255);
 }
-
-
 
 .navlinks {
   margin-right: 10px;

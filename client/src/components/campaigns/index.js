@@ -1,6 +1,9 @@
 import React, { Component }from 'react';
 import CampaignsTable from './campaigns-table';
 import AddCampaignButton from './add-campaign-btn';
+
+import Footer from "../footer";
+
 import API from "../utility/API"
 
 
@@ -35,6 +38,7 @@ class Campaigns extends Component {
                     <span class="add-btn-span"><AddCampaignButton UserInfo={this.props.UserInfo} loadCampaign={this.loadCampaign}/></span>
                 </div>
                 <CampaignsTable campaigns={this.state.campaigns} loadCampaign={this.loadCampaign}/>
+           <Footer />
             </div>
         )
     }

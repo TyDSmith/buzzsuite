@@ -51,7 +51,7 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page-start">
         <div className="login-modal signup-modal">
           <form className="login-form signup-form">
             <span className="login-signup-modal-message">
