@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// Import React Table
 import ReactTable from "react-table";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import Moment from "react-moment"
 import "react-table/react-table.css";
 import API from "../utility/API"
 
@@ -33,7 +32,8 @@ class CampaignsTable extends Component {
 
           {
               Header: "Date",
-              accessor: "date"
+              accessor: "date",
+              Cell: e =>  <Moment format="YYYY/MM/DD">{e.value}</Moment>
           },
 
           {

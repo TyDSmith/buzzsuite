@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-// import API from '../utility/API';
+import Moment from "react-moment"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 class Influencers extends Component {
@@ -27,7 +26,10 @@ class Influencers extends Component {
 
           {
               Header: "Date",
-              accessor: "date"
+              accessor: "date",
+              Cell: e =>  <Moment format="YYYY/MM/DD">{e.value}</Moment>
+
+
           },
 
           {
