@@ -48,10 +48,18 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findAllInfluencer: function(req, res) {
-    console.log ("triggered")
     db.influencerModel
       .find(req.query)
       .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateAverage: function(req, res) {
+    console.log ("avg triggered")
+    console.log (req.body)
+    
+    db.influencerModel
+      .findOneAndUpdate({ socialAccount: req.params.account }, {avgCPM:req.body.avgCPM, avgCPC: req.body.avgCPC})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

@@ -31,6 +31,10 @@ export default {
   getCampaignById: function(id) {
     return axios.get("/api/twitter/campaign/" + id);
     },
+
+  updateInfluencerAverageCPMCPC: function(userData) {
+    return axios.post("/api/twitter/influencer/" + userData.socialAccount, userData)
+  },
 // Gets the book with the given id
 getBook: function(id) {
   return axios.get("/api/books/" + id);

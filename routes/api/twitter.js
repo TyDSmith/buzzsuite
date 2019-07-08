@@ -16,17 +16,12 @@ router
 
 router
   .route("/influencer/:account")
-  .get(twitterController.findByInfluencer);
+  .get(twitterController.findByInfluencer)
+  .post(twitterController.updateAverage);
 
 router
   .route("/influencer")
   .get(twitterController.findAllInfluencer)
   .post(twitterController.createInfluencer);
-
-  router
-  .route("/influencer/:account")
-  .get(twitterController.findByInfluencer)
-  .put(twitterController.update)
-  .delete(twitterController.remove);
 
 module.exports = router;

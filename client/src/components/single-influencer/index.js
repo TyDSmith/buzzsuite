@@ -22,6 +22,7 @@ class SingleInfluencer extends Component {
 
     render () {
         let socialAccount = this.props.location.state.socialAccount
+        console.log (socialAccount)
         return (
             <div>
                 <h2>{this.props.UserInfo.name}</h2>
@@ -33,7 +34,7 @@ class SingleInfluencer extends Component {
                         <InfluencerHistory socialAccount={socialAccount} InfluencerProfileInfo={this.updateState}/>
                     </div>
                     <div class="column column-right">
-                        <SingleCampaignInputForm socialAccount={socialAccount}/>
+                        <SingleCampaignInputForm socialAccount={socialAccount} UserInfo={this.props.UserInfo}/>
                     </div>
                 </div>
     

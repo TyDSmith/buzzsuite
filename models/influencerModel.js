@@ -24,10 +24,13 @@ var influencerSchema = new Schema({
     type: String,
   },
   avgCPM: {
-    type:Number
+    type:Number,
+    default:0
+
   }, 
   avgCPC: {
-    type: Number
+    type: Number,
+    default:0
   }, 
   date: {
     type:Date,

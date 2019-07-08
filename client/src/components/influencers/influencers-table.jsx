@@ -16,17 +16,13 @@ class Influencers extends Component {
     componentDidMount() {
       this.loadInfluencers();
     }
-    
   
     loadInfluencers = () => {
       API.getInfluencers()
-      //   .then(res => console.log(res.data)) 
         .then((res) => {
-          console.log (res.data)
           this.setState({ influencer: res.data })
         })
         .catch(err => console.log(err));
-      //   console.log(this.state)
     };
 
   render(){

@@ -8,7 +8,7 @@ class InfluencerProfile extends Component {
     console.log (this.props)
     return (
       <div class="influencer-profile">
-        <h3>{this.props.InfluencerProfileInfo.name}</h3>
+        <h3>{this.props.socialAccount}</h3>
         <h5>Twitter</h5>
         <div class="influencer-profile-stats">
           <p>
