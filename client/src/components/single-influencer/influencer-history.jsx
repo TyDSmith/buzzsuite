@@ -23,11 +23,12 @@ class InfluencerHistory extends Component {
       .catch(err => console.log(err));
   };   
 
-  updateAverage = (avgCPM, avgCPC) => {
+  updateAverage = (avgCPM, avgCPC, avgCPE) => {
     let userData = {
       socialAccount: this.props.socialAccount,
       avgCPM: avgCPM,
       avgCPC: avgCPC,
+      avgCPE: avgCPE,
     };
 
     API.updateInfluencerAverageCPMCPC(userData).then().catch()
@@ -36,27 +37,32 @@ class InfluencerHistory extends Component {
 
   avgCPMnCPC = () => {
     
-    let avgCPM = null;
-    let avgCPC = null;
-    let CPM = null;
-    let CPC = null;
+    let avgCPM = 0;
+    let avgCPC = 0;
+    let avgCPE = 0;
+    let CPM = 0;
+    let CPC = 0;
+    let CPE = 0;
     for (let i = 0; i < this.state.influencers.length; i++) {
       CPM = CPM + this.state.influencers[i].CPM
       CPC = CPC + this.state.influencers[i].CPC
+      CPE = CPE + this.state.influencers[i].CPE
       if (i === this.state.influencers.length-1) {
         
         avgCPM = CPM / this.state.influencers.length;
         avgCPC = CPC / this.state.influencers.length;
+        avgCPE = CPE / this.state.influencers.length;
     
       }
     }
     let InfluencerProfileInfo = {
       avgCPM: avgCPM,
       avgCPC: avgCPC,
+      avgCPE: avgCPE,
       numberOfCampaigns: this.state.influencers.length,
     }
     this.props.InfluencerProfileInfo(InfluencerProfileInfo)
-    this.updateAverage(avgCPM, avgCPC)
+    this.updateAverage(avgCPM, avgCPC, avgCPE)
   }
 
   render() {
@@ -79,7 +85,7 @@ class InfluencerHistory extends Component {
               Link Clicks: {influencer.linkClicks}
             </p>
             <p>
-              Engagements: {influencer.retweet}
+              Engagements: {influencer.Engagement}
             </p>
           </div>
           ))}

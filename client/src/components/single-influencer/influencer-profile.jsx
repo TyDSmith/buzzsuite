@@ -17,6 +17,9 @@ class InfluencerProfile extends Component {
             Average CPC: <span>{this.props.InfluencerProfileInfo.avgCPC}</span>
           </p>
           <p>
+            Average CPE: <span>{this.props.InfluencerProfileInfo.avgCPE}</span>
+          </p>
+          <p>
             Campaigns: <span>{this.props.InfluencerProfileInfo.numberOfCampaigns}</span>
           </p>
         </div>
