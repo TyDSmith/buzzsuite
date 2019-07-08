@@ -1,3 +1,7 @@
+.homepage {
+  background: #f2f7f9;
+}
+
 .carousel-div html {
   height: 100%;
   overflow: hidden;
@@ -113,10 +117,12 @@ img.social {
 
 .home-intro-text {
   text-align: left;
+  padding-right: 16%;
 }
 .home-main-text {
   text-align: left;
   font-size: 2.4em;
+  padding-bottom: 10px;
 }
 
 .signup-button-home {
@@ -126,24 +132,43 @@ img.social {
   width: 90%;
   height: 40px;
   color: white;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #39b6bb,
     #13b8cd,
     #00b9e0,
     #00b8f1,
     #39b6ff
+  ); */
+
+  background: rgb(42, 74, 145);
+  background: linear-gradient(
+    56deg,
+    rgba(42, 74, 145, 1) 0%,
+    rgba(66, 140, 191, 1) 100%
   );
 }
 
+.signup-button-home:hover {
+  box-shadow: 0 10px 50px -5px rgba(51, 71, 91, 0.12);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.014);
+}
+
 .home-image-column {
-  flex: 4;
+  flex: 3;
+}
+
+.home-image {
+  flex: 1;
+  width: 60%;
 }
 
 .home-text-column {
   flex: 3;
   padding: 0px 50px;
   font-size: 1.2em;
+  margin: auto;
 }
 
 /* media screens */
@@ -152,12 +177,33 @@ img.social {
 
 .home-row {
   display: flex;
-  padding: 40px;
+  margin: 60px;
+  padding: 15px;
+  background: white;
+}
+
+.home-row:hover {
+  box-shadow: 0 10px 50px -5px rgba(51, 71, 91, 0.12);
+  transition: 0.2s ease-in-out;
+  transform: scale(1.014);
+}
+
+.home-subtitle {
+  font-size: 1.6em;
+}
+.home-content {
+  font-size: 1.2em;
 }
 
 /* contact */
 
 .home-contact-div {
-  background: black;
+  background: #2a4a91;
   color: white;
+  min-height: 200px;
+}
+
+.home-contact-content {
+  margin: auto;
+  height: 100%;
 }

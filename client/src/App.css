@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #f2f7f9;
 }
 
 .App-logo {
@@ -21,6 +22,7 @@
 
 .page-start {
   margin-top: 20px;
+  min-height: 100vh;
 }
 
 /* Typography */
