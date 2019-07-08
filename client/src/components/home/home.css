@@ -125,22 +125,14 @@ img.social {
   padding-bottom: 10px;
 }
 
-.signup-button-home {
+.signup-button-home,
+.contact-button-home {
   border-radius: 4px;
   margin-top: 10px;
   border: none;
   width: 90%;
   height: 40px;
   color: white;
-  /* background-image: linear-gradient(
-    to right top,
-    #39b6bb,
-    #13b8cd,
-    #00b9e0,
-    #00b8f1,
-    #39b6ff
-  ); */
-
   background: rgb(42, 74, 145);
   background: linear-gradient(
     56deg,

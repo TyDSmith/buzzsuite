@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 // import "./home";
 import InfluencerCarousel from "./carousel";
-// import { Carousel,
 import "./home.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import ContactRow from "./contact-row";
 import Footer from "../footer";
+
 
 function Home(props) {
   return (
@@ -57,13 +58,8 @@ function Home(props) {
         </div>
 
       </div>
-      <div className="home-contact-div">
-        <div className="home-contact-content">
-          <h4>Contact us</h4>
-          <button className="signup-button-home">Learn More</button>
-        </div>
 
-      </div>
+      {/* <ContactRow /> */}
       <Footer />
       {/* <InfluencerCarousel /> */}
 
