@@ -1,4 +1,5 @@
-.login-modal {
+.login-modal,
+.forgot-password-modal {
   align-content: center;
   background: #e8eef2;
   width: 50%;
@@ -8,7 +9,8 @@
   min-height: 200px;
   box-shadow: 0px 0px 13px -6px black;
 }
-.login-form-input {
+.login-form-input,
+.forgot-password-form-input {
   clear: both;
   margin: 5px;
   width: 75%;
@@ -19,11 +21,20 @@
   font-size: 1.2em;
 }
 
-.login-form-button {
+.login-form-button,
+.signup-form-button {
   background: #349fdf;
   border: none;
   border-radius: 5px;
+  line-height: 2em;
   width: 65%;
+}
+
+.login-form-button:hover,
+.signup-form-button:hover {
+  box-shadow: 0 10px 50px -5px rgba(51, 71, 91, 0.12);
+  transition: 0.2s ease-in-out;
+  transform: scale(1.014);
 }
 
 .signIn {

@@ -53,6 +53,7 @@ class Signup extends Component {
     return (
       <div className="page-start">
         <div className="login-modal signup-modal">
+          <img src="../images/logos/BuzzSuite.png" alt="logo" width="40%;" />
           <form className="login-form signup-form">
             <span className="login-signup-modal-message">
               <h3>{this.state.errorMessage}</h3>
@@ -92,7 +93,7 @@ class Signup extends Component {
               className="signup-form-input"
               placeholder="Confirm Password"
             />
-            <button onClick={this.CheckPassword.bind(this)} type="button">
+            <button onClick={this.CheckPassword.bind(this)} type="button" className="signup-form-button">
               {" "}
               Sign up
             </button>
