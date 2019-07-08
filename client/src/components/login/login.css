@@ -23,13 +23,14 @@
   background: #349fdf;
   border: none;
   border-radius: 5px;
-  width: 40%;
+  width: 65%;
 }
 
 .signIn {
   background-color: #436980;
   border: none;
   border-radius: 5px;
-  width: 40%;
+  width: 65%;
   color: white;
+  margin-top: 4px;
 }

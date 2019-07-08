@@ -1,9 +1,9 @@
-html {
+.carousel-div html {
   height: 100%;
   overflow: hidden;
 }
 
-body {
+.carousel-div body {
   color: black;
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: "Luna";
 }
 
 .stuff {
@@ -71,7 +70,7 @@ body {
   padding: 100px 0px;
 }
 
-p {
+.bodyCopy p {
   margin: 0px 200px 50px 200px;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   font-weight: 50;
@@ -91,7 +90,7 @@ img.social {
   margin-left: 80px;
 }
 
-h1 {
+.bodyCopy h1 {
   font-weight: 1300;
   font-family: Avenir Next W02, Helvetica, Arial, sans-serif;
   color: white;

@@ -1,4 +1,5 @@
-.login-modal {
+.login-modal,
+.signup-modal {
   align-content: center;
   background: #e8eef2;
   width: 50%;
@@ -8,7 +9,8 @@
   min-height: 200px;
   box-shadow: 0px 0px 13px -6px black;
 }
-.login-form-input {
+.login-form-input,
+.signup-form-input {
   clear: both;
   margin: 5px;
   width: 75%;
@@ -19,9 +21,14 @@
   font-size: 1.2em;
 }
 
-button {
+.signup-form button {
   background: #349fdf;
   border: none;
+  font-size: 1.2em;
   border-radius: 5px;
-  width: 40%;
+  width: 65%;
+}
+
+.login-signup-modal-message {
+  font-size: 2em;
 }
