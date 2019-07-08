@@ -80,10 +80,7 @@ class InfluencerHistory extends Component {
               Link Clicks: {influencer.linkClicks}
             </p>
             <p>
-              Retweets: {influencer.retweet}
-            </p>
-            <p>
-              Likes: {influencer.likes}
+              Engagements: {influencer.retweet}
             </p>
           </div>
           ))}
