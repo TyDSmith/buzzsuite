@@ -12,7 +12,8 @@ router
 
 router
   .route("/campaign/:id")
-  .get(twitterController.findById);
+  .get(twitterController.findById)
+  .post(twitterController.remove);
 
 router
   .route("/influencer/:account")

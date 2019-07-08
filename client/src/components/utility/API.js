@@ -50,6 +50,11 @@ saveBook: function(bookData) {
     return axios.post("/api/twitter/campaign", userData);
   },
 
+  
+  deleteCampaign: function(id) {
+    return axios.post("/api/twitter/campaign/" + id);
+  },
+
   newInfluencer: function(userData) {
     return axios.post("/api/twitter/influencer", userData);
   },

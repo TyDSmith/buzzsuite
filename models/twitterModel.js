@@ -69,6 +69,10 @@ var twitterSchema = new Schema({
   },
   mediaEngagement: {
       type: Number
+  },
+  X: {
+      type: String,
+      default: "X"
   }
 });
 

@@ -34,7 +34,7 @@ class Campaigns extends Component {
                     <h1 class="page-title">Campaigns</h1>
                     <span class="add-btn-span"><AddCampaignButton UserInfo={this.props.UserInfo} loadCampaign={this.loadCampaign}/></span>
                 </div>
-                <CampaignsTable campaigns={this.state.campaigns}/>
+                <CampaignsTable campaigns={this.state.campaigns} loadCampaign={this.loadCampaign}/>
             </div>
         )
     }
