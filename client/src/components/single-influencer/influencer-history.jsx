@@ -70,7 +70,7 @@ class InfluencerHistory extends Component {
               Date: {influencer.date}
             </p>
             <p>
-            URL: {influencer.urlLink}
+            URL: <a href={influencer.urlLink} target="_blank" rel="noopener noreferrer"> {influencer.urlLink} </a>
             </p>
             <p>
               Impressions: {influencer.Impressions}
