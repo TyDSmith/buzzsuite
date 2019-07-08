@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import InfluencersTable from './influencers-table';
 // import InfluencersFilter from './influencers-filter';
 import AddInfluencerButton from './add-influencer-btn';
+import Footer from "../footer";
 import API from '../utility/API';
 
 class Influencers extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -27,7 +27,7 @@ class Influencers extends Component {
 
     render() {
         return (
-            <div>
+            <div className="page-start">
                 <div class="page-heading">
                     <h1 class="page-title">Influencers</h1>
                     <span class="add-btn-span">
@@ -38,6 +38,7 @@ class Influencers extends Component {
                     {/* <InfluencersFilter /> */}
                 </div>
                 <InfluencersTable influencers={this.state.influencers} />
+                <Footer />
             </div>
         )
     }

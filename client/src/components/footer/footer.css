@@ -1,0 +1,19 @@
+.footer-div {
+  display: flex;
+  padding: 15px;
+  background: #18334d;
+  min-height: 40px;
+  color: #c5cfd8;
+  margin-top: 20px;
+}
+
+.footer-center-column {
+  flex: 2;
+}
+
+.footer-center-column {
+  flex: 3;
+}
+.footer-center-column {
+  flex: 2;
+}
