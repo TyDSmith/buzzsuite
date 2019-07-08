@@ -21,7 +21,7 @@ class Campaigns extends Component {
         API.getCampaignById(this.props.UserInfo.data._id)
           .then((res) => {
             this.setState({ campaigns: res.data })
-            console.log (this.state.campaigns)
+          
           })
           .catch(err => console.log(err));
           

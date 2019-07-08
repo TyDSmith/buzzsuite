@@ -14,7 +14,6 @@ class AddInfluencerButton extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     Modal.setAppElement(this.el);
   }
 

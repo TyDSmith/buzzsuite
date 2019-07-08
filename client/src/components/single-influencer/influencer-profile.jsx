@@ -5,7 +5,6 @@ class InfluencerProfile extends Component {
   
   
   render() {
-    console.log (this.props)
     return (
       <div class="influencer-profile">
         <h3>{this.props.socialAccount}</h3>

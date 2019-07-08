@@ -21,11 +21,9 @@ export default {
 
   //get all items in database
   getInfluencers: function() {
-  console.log("API ")
   return axios.get("/api/twitter/influencer");
   },
   getCampaignByAccount: function(socialAccount) {
-    console.log (socialAccount)
     return axios.get("/api/twitter/influencer/" + socialAccount);
     },
   getCampaignById: function(id) {
