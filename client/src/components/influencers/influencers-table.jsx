@@ -2,28 +2,10 @@ import React, { Component } from "react";
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import API from '../utility/API';
+// import API from '../utility/API';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 class Influencers extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-        influencer: []
-      };
-    }
-    
-    componentDidMount() {
-      this.loadInfluencers();
-    }
-  
-    loadInfluencers = () => {
-      API.getInfluencers()
-        .then((res) => {
-          this.setState({ influencer: res.data })
-        })
-        .catch(err => console.log(err));
-    };
 
   render(){
       const columns = [
@@ -71,7 +53,7 @@ class Influencers extends Component {
       <ReactTable
       defaultPageSize={8}
       columns = {columns}
-      data = {this.state.influencer}
+      data = {this.props.influencers}
   >
 
 </ReactTable>
