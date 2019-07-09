@@ -6,27 +6,21 @@ import "./footer.css";
 class Footer extends Component {
 
     render() {
-
         return (
-
             <div className="footer-div">
-
                 <div className="footer-left-column">
                     <img
                         className="footer-image"
                         src="../images/logos/BuzzSuite-footer.png"
-                        height="20"
+                        height="25"
                     />
                 </div>
                 <div className="footer-center-column">
-
                 </div>
                 <div className="footer-right-column">
                     A Mountain Lion Company
                 </div>
             </div>
-
-
         )
     }
 }

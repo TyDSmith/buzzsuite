@@ -189,6 +189,11 @@
   border-radius: 4px;
   flex: 1 1;
 }
+.add-button:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.094);
+  box-shadow: 0 10px 50px -5px rgba(51, 71, 91, 0.12);
+}
 
 /* Modal */
 
@@ -219,4 +224,28 @@
     #00b8f1,
     #39b6ff
   );
+}
+
+.table-delete-btn {
+  color: #333333;
+  background: none;
+  border: none;
+}
+
+.single-delete-btn {
+  color: #5c5c5c;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: right;
+}
+
+.table-delete-btn:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.514);
+}
+
+.single-delete-btn:hover {
+  transition: 0.2s ease-in-out;
+  color: #00b8f1;
 }

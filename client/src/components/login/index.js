@@ -70,7 +70,7 @@ class Login extends Component {
           </form>
           <Link to="/signup">
             {" "}
-            <button className="signIn">Sign up</button>{" "}
+            <button className="signIn signup-form-button">Sign up</button>{" "}
           </Link>
           <div className="forgot-password">
             <Link to="/forgotpassword"> Forgot your password? </Link>
