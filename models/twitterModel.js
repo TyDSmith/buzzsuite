@@ -34,14 +34,21 @@ var twitterSchema = new Schema({
   MU: {
       type: Number
   },
+  Cost: {
+    type: Number,
+    default: 0
+  },
   CPM: {
-      type: Number
+      type: Number,
+      default: 0
   },
   CPC: {
-      type: Number
+      type: Number,
+      default: 0
   },
   CPE: {
-      type: Number
+      type: Number,
+      default: 0
   },
   Impressions: {
       type: Number
