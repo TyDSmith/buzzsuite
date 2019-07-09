@@ -24,13 +24,11 @@ class Influencers extends Component {
               accessor: "channel"
           },
 
-          {
-              Header: "Date",
-              accessor: "date",
-              Cell: e =>  <Moment format="YYYY/MM/DD">{e.value}</Moment>
-
-
-          },
+        //   {
+        //       Header: "Date",
+        //       accessor: "date",
+        //       Cell: e =>  <Moment format="YYYY/MM/DD">{e.value}</Moment>
+        //   },
 
           {
               Header: "Product",
