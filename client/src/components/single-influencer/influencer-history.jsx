@@ -14,7 +14,7 @@ class InfluencerHistory extends Component {
   };
 
   render() {
-    console.log (this.props.influencers)
+    
     return (
       <div class="influencer-history">
         {this.props.influencers.map(influencer => (
