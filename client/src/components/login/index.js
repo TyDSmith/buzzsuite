@@ -6,7 +6,9 @@ import API from "../utility/API";
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      errorMessage: "",
+    };
   }
 
   onChange = event => {
@@ -31,7 +33,13 @@ class Login extends Component {
       password: this.state.password
     };
     API.userSignin(userData).then(account => {
-      this.props.updateState(account);
+      
+      if (account.data === "password wrong") {
+        this.setState({ errorMessage: "Username / Password does not match"})
+      } else {
+        this.props.updateState(account);
+      }
+      
     });
   };
   render() {
@@ -74,8 +82,11 @@ class Login extends Component {
           </Link>
           <div className="forgot-password">
             <Link to="/forgotpassword"> Forgot your password? </Link>
+            <div> {this.state.errorMessage} </div>
           </div>
         </div>
+
+        
       </div>
     );
   }

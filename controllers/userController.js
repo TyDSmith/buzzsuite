@@ -59,7 +59,7 @@ module.exports = {
         function returnJSON (result) {
           if (result) {
             res.json(dbModel)
-          } 
+          } else {res.json("password wrong")}
         }
       })
       .catch(err => res.status(422).json(err));
