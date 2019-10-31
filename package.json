@@ -28,7 +28,7 @@
     "express-promise-router": "^3.0.3",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.3.16",
+    "mongoose": "^5.7.5",
     "namor": "^1.1.2",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-modal": "^3.8.1",
