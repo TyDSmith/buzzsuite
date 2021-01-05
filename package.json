@@ -20,7 +20,7 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bcrypt": "^3.0.6",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
